@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
 
 /* Section base */
 section { padding: 96px 0; }
-section.bg-subtle { background: var(--bg-subtle); }
+section.bg-subtle { background: #ffffff; }
 
 .section-header { margin-bottom: 56px; }
 .section-label {
@@ -776,7 +776,7 @@ section.bg-subtle { background: var(--bg-subtle); }
   font-size: 0.78rem;
   color: var(--text-subtle);
   padding: 4px 8px;
-  background: var(--bg-subtle);
+  background: #ffffff;
   border-radius: 4px;
   border: 1px solid var(--border);
   width: fit-content;
@@ -876,7 +876,7 @@ section.bg-subtle { background: var(--bg-subtle); }
   font-size: 0.7rem;
   font-weight: 600;
   padding: 2px 8px;
-  background: var(--bg-muted);
+  background: var(--border);
   color: var(--text-subtle);
   border-radius: 100px;
 }
