@@ -4,34 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dr. N. Kiruthiga — Associate Professor of Pharmaceutical Chemistry, KMCH College of Pharmacy, Coimbatore. Expert in Computer-Aided Drug Design, Medicinal Chemistry, AI-Driven Drug Discovery." />
-  <meta name="keywords" content="Dr N Kiruthiga, Pharmaceutical Chemistry, Drug Design, CADD, Medicinal Chemistry, KMCH College of Pharmacy" />
+  <meta name="keywords" content="Dr N Kiruthiga, Pharmaceutical Chemistry, Drug Design, CADD, Medicinal Chemistry, KMCH College of Pharmacy, Coimbatore" />
   <meta name="author" content="Dr. N. Kiruthiga" />
   <meta property="og:title" content="Dr. N. Kiruthiga | Pharmaceutical Chemistry &amp; Drug Discovery" />
   <meta property="og:description" content="Associate Professor with 18.5+ years experience, 41 publications, 6 patents, and pioneering research in CADD and AI-driven drug discovery." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kirunatarajanlab.com" />
   <title>Dr. N. Kiruthiga | Pharmaceutical Chemistry &amp; Drug Discovery</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Particle Canvas -->
-  <canvas id="particleCanvas"></canvas>
-
-  <!-- Navigation -->
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-icon"><i class="fa-solid fa-atom"></i></span>
-        <span>Dr. Kiruthiga</span>
+        <span class="nav-logo-icon"><i class="fa-solid fa-atom"></i></span>
+        Dr. Kiruthiga
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -49,108 +43,101 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
     <div class="hero-content">
       <div class="hero-badge reveal">
         <i class="fa-solid fa-flask-vial"></i>
-        <span>Pharmaceutical Chemistry &amp; Drug Discovery</span>
+        Associate Professor &middot; Pharmaceutical Chemistry
       </div>
-      <h1 class="hero-name reveal">
-        Dr. N. <span class="gradient-text">Kiruthiga</span>
-      </h1>
-      <p class="hero-title reveal">Associate Professor, Department of Pharmaceutical Chemistry</p>
+      <h1 class="hero-name reveal">Dr. N. Kiruthiga</h1>
       <p class="hero-institution reveal">
         <i class="fa-solid fa-building-columns"></i>
-        KMCH College of Pharmacy, Coimbatore – 641048, Tamil Nadu, India
+        KMCH College of Pharmacy, Coimbatore &ndash; 641048, Tamil Nadu, India
       </p>
       <div class="hero-typewriter reveal">
-        <span class="typewriter-static">Pioneering </span>
-        <span class="typewriter-text" id="typewriterText"></span>
-        <span class="typewriter-cursor">|</span>
+        <span class="typewriter-static">Pioneering </span><span id="typewriterText"></span><span class="typewriter-cursor">|</span>
       </div>
       <div class="hero-cta reveal">
         <a href="#about" class="btn-primary">
           <i class="fa-solid fa-microscope"></i> Explore Research
         </a>
-        <a href="#contact" class="btn-glass">
-          <i class="fa-solid fa-envelope"></i> Get in Touch
+        <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="fa-brands fa-google-scholar"></i> View Publications
         </a>
       </div>
-      <div class="hero-links reveal">
-        <a href="mailto:kiruthigagovindaraj@gmail.com" class="hero-link" aria-label="Email">
+      <div class="hero-social reveal">
+        <a href="mailto:kiruthigagovindaraj@gmail.com" class="hero-social-link" aria-label="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
-        <a href="https://linkedin.com/in/kiruthiga-govindaraj-898b456a" target="_blank" rel="noopener" class="hero-link" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/kiruthiga-govindaraj-898b456a" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-link" aria-label="Google Scholar">
+        <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-social-link" aria-label="Google Scholar">
           <i class="fa-brands fa-google-scholar"></i>
         </a>
-        <a href="https://orcid.org/0000-0002-7230-2003" target="_blank" rel="noopener" class="hero-link" aria-label="ORCID">
+        <a href="https://orcid.org/0000-0002-7230-2003" target="_blank" rel="noopener" class="hero-social-link" aria-label="ORCID">
           <i class="fa-brands fa-orcid"></i>
         </a>
       </div>
     </div>
-    <div class="hero-scroll-indicator">
-      <div class="scroll-dot"></div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
-  <!-- Stats Section -->
+  <!-- STATS BAR -->
   <section id="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-file-lines"></i></div>
-          <div class="stat-number" data-target="41">0</div>
-          <div class="stat-label">Publications</div>
-          <div class="stat-sub">Scopus / WoS / PubMed indexed</div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="41">0</span>
+          <span class="stat-label">Publications</span>
+          <span class="stat-sub">Scopus / WoS / PubMed</span>
         </div>
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
-          <div class="stat-number" data-target="6">0</div>
-          <div class="stat-label">Patents</div>
-          <div class="stat-sub">India · UK · Germany</div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Patents</span>
+          <span class="stat-sub">India &middot; UK &middot; Germany</span>
         </div>
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
-          <div class="stat-number stat-decimal" data-target="18.5">0</div>
-          <div class="stat-label">Years Experience</div>
-          <div class="stat-sub">Teaching &amp; Research</div>
+        <div class="stat-item reveal">
+          <span class="stat-number stat-decimal" data-target="18.5">0</span>
+          <span class="stat-label">Years Experience</span>
+          <span class="stat-sub">Teaching &amp; Research</span>
         </div>
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-book-open"></i></div>
-          <div class="stat-number" data-target="3">0</div>
-          <div class="stat-label">Books</div>
-          <div class="stat-sub">2 Published · 1 Forthcoming</div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Books</span>
+          <span class="stat-sub">2 Published &middot; 1 Forthcoming</span>
         </div>
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
-          <div class="stat-number" data-target="35">0</div>
-          <div class="stat-label">Students Mentored</div>
-          <div class="stat-sub">UG &amp; PG Research Projects</div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="35">0</span>
+          <span class="stat-label">Students Mentored</span>
+          <span class="stat-sub">UG &amp; PG Projects</span>
         </div>
-        <div class="stat-card glass-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
-          <div class="stat-number" data-target="17">0</div>
-          <div class="stat-label">Q1/Q2 Papers</div>
-          <div class="stat-sub">Published in 2025–2026</div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="17">0</span>
+          <span class="stat-label">Q1/Q2 Papers</span>
+          <span class="stat-sub">Published 2025&ndash;2026</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About / Summary -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Professional Profile</span>
-        <h2 class="section-title">About <span class="gradient-text">Dr. Kiruthiga</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Professional Profile</span>
+        <h2 class="section-title">About Dr. <span class="accent">Kiruthiga</span></h2>
       </div>
       <div class="about-grid">
-        <div class="about-text reveal">
+        <div class="about-left reveal">
           <p class="about-summary">
             Associate Professor of Pharmaceutical Chemistry with over <strong>18.5 years of teaching experience</strong> and a sustained, fast-growing research record in computer-aided drug design and medicinal chemistry.
           </p>
@@ -158,7 +145,7 @@
             Research core centers on the design, synthesis and computational-to-experimental evaluation of flavonoid, chromone, pyrazoline and heterocyclic scaffolds against diabetes, inflammation, infection and cancer targets, with current work extending into HDAC-inhibitor design, machine-learning-assisted drug discovery, and marine bioactive compounds.
           </p>
           <p class="about-detail">
-            Author of <strong>41 peer-reviewed publications</strong> (predominantly Scopus/Web of Science/PubMed-indexed, including 18 in Q1/Q2 journals since 2025), <strong>6 patents</strong>, 3 authored/edited books and 4 book chapters.
+            Author of <strong>41 peer-reviewed publications</strong> (predominantly Scopus/Web of Science/PubMed-indexed, including 18 in Q1/Q2 journals since 2025), <strong>6 patents</strong>, 3 authored/edited books and 4 book chapters, alongside a strong record of UG/PG mentorship, NBA/NAAC accreditation leadership, and peer review for Elsevier, Springer and Bentham Science journals.
           </p>
           <div class="about-highlights">
             <div class="highlight-item">
@@ -179,99 +166,90 @@
             </div>
           </div>
         </div>
-        <div class="about-vision reveal">
-          <div class="vision-card glass-card">
-            <div class="vision-icon"><i class="fa-solid fa-eye"></i></div>
-            <h3>Vision</h3>
-            <p>To advance drug discovery through computational and medicinal chemistry, and to build institutional research strength through funded research, scholarly output, and academic excellence.</p>
-          </div>
-          <div class="mission-card glass-card">
-            <div class="vision-icon"><i class="fa-solid fa-rocket"></i></div>
-            <h3>Mission</h3>
-            <ul>
-              <li>Secure extramural grants (DST, ICMR, AICTE, BIRAC, TNSCST)</li>
-              <li>Mentor UG/PG/PhD scholars toward publication-ready, patentable research</li>
-              <li>Elevate institutional accreditation standing through outcome-based education</li>
-            </ul>
+        <div class="about-right reveal">
+          <div class="vision-mission-stack">
+            <div class="vm-card vision">
+              <div class="vm-header">
+                <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+                <h3>Vision</h3>
+              </div>
+              <p>To advance drug discovery through computational and medicinal chemistry, and to build institutional research strength through funded research, scholarly output, and academic excellence.</p>
+            </div>
+            <div class="vm-card mission">
+              <div class="vm-header">
+                <div class="vm-icon"><i class="fa-solid fa-rocket"></i></div>
+                <h3>Mission</h3>
+              </div>
+              <ul>
+                <li>Secure extramural grants (DST, ICMR, AICTE, BIRAC, TNSCST)</li>
+                <li>Mentor UG/PG/PhD scholars toward publication-ready, patentable research</li>
+                <li>Elevate institutional accreditation standing through outcome-based education</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Research Areas -->
+  <!-- RESEARCH AREAS -->
   <section id="research">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">Core <span class="gradient-text">Research Areas</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Core <span class="accent">Research Areas</span></h2>
       </div>
       <div class="research-grid">
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #00d4ff;">
-            <i class="fa-solid fa-computer"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap teal"><i class="fa-solid fa-computer"></i></div>
           <h3>Computer-Aided Drug Design</h3>
           <p>Molecular docking, MD simulation, virtual screening, QSAR modelling and computational toxicology using Maestro, AutoDock &amp; BIOVIA Discovery Studio.</p>
           <div class="research-tags">
             <span>Molecular Docking</span><span>MD Simulation</span><span>QSAR</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #7c3aed;">
-            <i class="fa-solid fa-vial"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap purple"><i class="fa-solid fa-vial"></i></div>
           <h3>Medicinal Chemistry</h3>
           <p>Design and synthesis of flavonoid, chromone, pyrazoline and heterocyclic scaffolds with spectroscopic characterization (NMR, IR, Mass).</p>
           <div class="research-tags">
             <span>Flavonoids</span><span>Chromones</span><span>Pyrazolines</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #f59e0b;">
-            <i class="fa-solid fa-pills"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap gold"><i class="fa-solid fa-pills"></i></div>
           <h3>Drug Discovery</h3>
           <p>In-silico, in-vitro and in-vivo pharmacological screening for anti-diabetic, anti-inflammatory, antimicrobial and anticancer targets.</p>
           <div class="research-tags">
             <span>Anti-diabetic</span><span>Anticancer</span><span>Anti-inflammatory</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #ef4444;">
-            <i class="fa-solid fa-dna"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap red"><i class="fa-solid fa-dna"></i></div>
           <h3>HDAC Inhibitor Design</h3>
           <p>Design and synthesis of HDAC inhibitors for apoptosis induction in human cervical cancer cells, including piperidine hydroxamate scaffolds.</p>
           <div class="research-tags">
             <span>HDAC</span><span>Apoptosis</span><span>Cancer</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #10b981;">
-            <i class="fa-solid fa-brain"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap green"><i class="fa-solid fa-brain"></i></div>
           <h3>AI &amp; Machine Learning</h3>
           <p>Machine learning and explainable AI applications in cheminformatics and drug discovery; Python-based tools for molecular fingerprint visualization.</p>
           <div class="research-tags">
             <span>Explainable AI</span><span>Cheminformatics</span><span>Python</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #06b6d4;">
-            <i class="fa-solid fa-water"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap cyan"><i class="fa-solid fa-water"></i></div>
           <h3>Marine Bioactive Compounds</h3>
           <p>Marine bioactive molecules as antiviral (HMPV, Nipah, Zika) and antimicrobial agents with focus on natural product drug discovery.</p>
           <div class="research-tags">
             <span>Antiviral</span><span>Marine Natural Products</span><span>HMPV</span>
           </div>
         </div>
-        <div class="research-card glass-card reveal">
-          <div class="research-icon" style="--icon-color: #a855f7;">
-            <i class="fa-solid fa-flask"></i>
-          </div>
+        <div class="research-card reveal">
+          <div class="research-icon-wrap blue"><i class="fa-solid fa-flask"></i></div>
           <h3>Spectroscopic Analysis</h3>
           <p>Structure elucidation and characterization using Nuclear Magnetic Resonance (NMR), Infrared (IR) spectroscopy, and Mass spectrometry.</p>
           <div class="research-tags">
@@ -282,269 +260,275 @@
     </div>
   </section>
 
-  <!-- Publications -->
+  <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Scholarly Output</span>
-        <h2 class="section-title">Selected <span class="gradient-text">Publications</span></h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">41 peer-reviewed publications (2007–2026) · Scopus / WoS / PubMed indexed · Impact factors up to 4.7</p>
+        <span class="section-label">Scholarly Output</span>
+        <h2 class="section-title">Selected <span class="accent">Publications</span></h2>
+        <p class="section-subtitle">41 peer-reviewed publications (2007&ndash;2026) &middot; Scopus / WoS / PubMed indexed &middot; Impact factors up to 4.7</p>
+      </div>
+      <div class="pubs-meta reveal">
+        <i class="fa-solid fa-circle-info" style="color:var(--teal);margin-right:8px;"></i>
+        Showing 12 selected high-impact publications. <strong>17 Q1/Q2 papers published in 2025&ndash;2026 alone.</strong>
       </div>
       <div class="publications-list">
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Flavonoid derivatives as anticancer agents</h4>
-            <p class="pub-authors">Yuan Chen, Xiaohua Tang, Yurong Zou, Dongwei Zhu, Selvaraj Muthusamy, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> International Journal · Anticancer Research</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Flavonoid derivatives as anticancer agents</div>
+            <div class="pub-authors">Yuan Chen, Xiaohua Tang, Yurong Zou, Dongwei Zhu, Selvaraj Muthusamy, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> International Journal &middot; Anticancer Research</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Plant-Derived Heterocyclic Compounds: A Promising Review on Natural Scaffolds</h4>
-            <p class="pub-authors">Jindong Dai, Xue Xia, Xincheng Hu, Thangamani Kanagaraj, Kanagaraj Rajalakshmi, <strong>Natarajan Kiruthiga</strong>, Dongwei Zhu et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Natural Products Review</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Plant-Derived Heterocyclic Compounds: A Promising Review on Natural Scaffolds</div>
+            <div class="pub-authors">Jindong Dai, Xue Xia, Xincheng Hu, Thangamani Kanagaraj, Kanagaraj Rajalakshmi, <strong>Natarajan Kiruthiga</strong>, Dongwei Zhu et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Natural Products Review</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q2">Q2</div>
-            <h4>Design, synthesis, and evaluation of novel therapeutic scaffolds</h4>
-            <p class="pub-authors">Wanhui Dai, Dongwei Zhu, Kanagaraj Rajalakshmi, Sudhakar Pachiappan, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Medicinal Chemistry Communications</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Design, synthesis, and evaluation of novel therapeutic scaffolds</div>
+            <div class="pub-authors">Wanhui Dai, Dongwei Zhu, Kanagaraj Rajalakshmi, Sudhakar Pachiappan, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Medicinal Chemistry Communications</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q2">Q2</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q2">Q2</div>
-            <h4>Strategic Applications of Heterocyclic Compounds in Pharmaceutical Innovation</h4>
-            <p class="pub-authors">Kanagaraj Rajalakshmi, Yan Dong, Jindong Dai, Yuerong Zou, <strong>Natarajan Kiruthiga</strong>, P Balaji, Dongwei Zhu</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Pharmaceutical Innovation Reviews</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Strategic Applications of Heterocyclic Compounds in Pharmaceutical Innovation</div>
+            <div class="pub-authors">Kanagaraj Rajalakshmi, Yan Dong, Jindong Dai, Yuerong Zou, <strong>Natarajan Kiruthiga</strong>, P Balaji, Dongwei Zhu</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Pharmaceutical Innovation Reviews</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q2">Q2</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Novel anti-inflammatory heterocyclic compounds</h4>
-            <p class="pub-authors">Panneerselvam Theivendren, Surabhi Panneerselvam, Jayakumari Swaminathan, Vijayakumar Murugesan, <strong>Natarajan Kiruthiga*</strong> et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> European Journal of Medicinal Chemistry</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Novel anti-inflammatory heterocyclic compounds</div>
+            <div class="pub-authors">Panneerselvam Theivendren, Surabhi Panneerselvam, Jayakumari Swaminathan, Vijayakumar Murugesan, <strong>Natarajan Kiruthiga*</strong> et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> European Journal of Medicinal Chemistry</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q2">Q2</div>
-            <h4>Marine bioactive molecules as antiviral agents</h4>
-            <p class="pub-authors">Stalin Arulsamy, Praveen Jambulingam Mani, Sivakumar Ravi, <strong>Kiruthiga Natarajan</strong>, Suresh Kumar Krishnan et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Marine Drugs &amp; Natural Products</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Marine bioactive molecules as antiviral agents</div>
+            <div class="pub-authors">Stalin Arulsamy, Praveen Jambulingam Mani, Sivakumar Ravi, <strong>Kiruthiga Natarajan</strong>, Suresh Kumar Krishnan et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Marine Drugs &amp; Natural Products</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q2">Q2</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Targeted anticancer potential of novel compounds</h4>
-            <p class="pub-authors">Jianxing Xu, Dongwei Zhu, <strong>Natarajan Kiruthiga</strong>, Kanagaraj Rajalakshmi, Panneerselvam Theivendren, Selvaraj Muthusamy et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Cancer Letters &amp; Therapy</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Targeted anticancer potential of novel compounds</div>
+            <div class="pub-authors">Jianxing Xu, Dongwei Zhu, <strong>Natarajan Kiruthiga</strong>, Kanagaraj Rajalakshmi, Panneerselvam Theivendren, Selvaraj Muthusamy et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Cancer Letters &amp; Therapy</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2026</div>
-          <div class="pub-content">
-            <div class="pub-badge highlight">Corresponding</div>
-            <h4>Design and Synthesis of Piperidine Hydroxamate HDAC Inhibitors</h4>
-            <p class="pub-authors"><strong>Kiruthiga Natarajan*</strong>, SureshKumar Krishnan, Stalin Arulsamy, Adhirajan Natarajan, Venkatesh Gunasekar, Vaishnavi Vallinayagam</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Journal of Medicinal Chemistry · HDAC/Apoptosis</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2026">2026</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Design and Synthesis of Piperidine Hydroxamate HDAC Inhibitors</div>
+            <div class="pub-authors"><strong>Kiruthiga Natarajan*</strong>, SureshKumar Krishnan, Stalin Arulsamy, Adhirajan Natarajan, Venkatesh Gunasekar, Vaishnavi Vallinayagam</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Journal of Medicinal Chemistry &middot; HDAC/Apoptosis</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge corr">Corresponding</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2025</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Development of Nipah virus drugs from FDA-approved drugs: An In-silico Approach</h4>
-            <p class="pub-authors">Panneerselvam Theivendran, Selvaraj Kunjiappan, Parasuraman Pavadai, <strong>Natarajan Kiruthiga</strong>, Anusuya Murugavel, Avinash Dayalan</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Antiviral Research</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2025">2025</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Development of Nipah virus drugs from FDA-approved drugs: An In-silico Approach</div>
+            <div class="pub-authors">Panneerselvam Theivendran, Selvaraj Kunjiappan, Parasuraman Pavadai, <strong>Natarajan Kiruthiga</strong>, Anusuya Murugavel, Avinash Dayalan</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Antiviral Research</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2025</div>
-          <div class="pub-content">
-            <div class="pub-badge q2">Q2</div>
-            <h4>Exploring alkaloid-based scaffolds for drug design</h4>
-            <p class="pub-authors">Yumei Chen, Denghua Yu, Dongwei Zhu, Selvaraj Muthusamy, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren, Kanagaraj Rajalakshmi et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Natural Products &amp; Medicinal Chemistry</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2025">2025</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Exploring alkaloid-based scaffolds for drug design</div>
+            <div class="pub-authors">Yumei Chen, Denghua Yu, Dongwei Zhu, Selvaraj Muthusamy, <strong>Natarajan Kiruthiga</strong>, Panneerselvam Theivendren, Kanagaraj Rajalakshmi et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Natural Products &amp; Medicinal Chemistry</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q2">Q2</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2025</div>
-          <div class="pub-content">
-            <div class="pub-badge highlight">Corresponding</div>
-            <h4>Marine bioactive molecules as potential antiviral agents against HMPV</h4>
-            <p class="pub-authors">Stalin Arulsamy, Mohankumar Ramar, Suresh Kumar Krishnan, Kartiga Natarajan, <strong>Kiruthiga Natarajan*</strong>, Parasuraman Pavadai</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Marine Pharmacology</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2025">2025</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Marine bioactive molecules as potential antiviral agents against HMPV</div>
+            <div class="pub-authors">Stalin Arulsamy, Mohankumar Ramar, Suresh Kumar Krishnan, Kartiga Natarajan, <strong>Kiruthiga Natarajan*</strong>, Parasuraman Pavadai</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Marine Pharmacology</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge corr">Corresponding</span></div>
         </div>
-        <div class="pub-item glass-card reveal">
-          <div class="pub-year-badge">2025</div>
-          <div class="pub-content">
-            <div class="pub-badge q1">Q1</div>
-            <h4>Emerging therapeutic targets in pharmaceutical research</h4>
-            <p class="pub-authors">Panneerselvam Theivendren, Parasuraman Pavadai, Selvaraj Kunjiappan, <strong>Natarajan Kiruthiga</strong>, Kumarappan Chidambaram et al.</p>
-            <div class="pub-meta"><i class="fa-solid fa-journal-whills"></i> Drug Discovery Today</div>
+
+        <div class="pub-item reveal">
+          <div class="pub-year"><span class="pub-year-num y2025">2025</span></div>
+          <div class="pub-body">
+            <div class="pub-title">Emerging therapeutic targets in pharmaceutical research</div>
+            <div class="pub-authors">Panneerselvam Theivendren, Parasuraman Pavadai, Selvaraj Kunjiappan, <strong>Natarajan Kiruthiga</strong>, Kumarappan Chidambaram et al.</div>
+            <div class="pub-journal"><i class="fa-solid fa-book-open"></i> Drug Discovery Today</div>
           </div>
+          <div class="pub-badge-wrap"><span class="pub-badge q1">Q1</span></div>
         </div>
+
       </div>
-      <div class="publications-cta reveal">
-        <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn-primary">
+      <div class="pubs-cta reveal">
+        <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn-teal">
           <i class="fa-brands fa-google-scholar"></i> View All 41 Publications &rarr;
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Patents -->
+  <!-- PATENTS -->
   <section id="patents">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Intellectual Property</span>
-        <h2 class="section-title">Patents &amp; <span class="gradient-text">Innovations</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Intellectual Property</span>
+        <h2 class="section-title">Patents &amp; <span class="accent">Innovations</span></h2>
       </div>
       <div class="patents-grid">
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag">
-            <i class="fa-solid fa-flag"></i> India
-          </div>
-          <div class="patent-number">Patent #1</div>
+
+        <div class="patent-card reveal">
+          <div class="patent-country india"><i class="fa-solid fa-flag"></i> India</div>
+          <div class="patent-num">Patent #1</div>
           <h4>Synthesis of 4-methyl-2-((2-(2-nitrophenyl)-1-phenylvinyl)sulfonyl)thiophene</h4>
-          <p>Novel synthesis methodology for sulfonyl-thiophene derivatives with pharmaceutical applications. Co-inventors: Dr. Panneerselvam Theivendren, Dr. T.R. Yoithapprabhunath, Dr. N. Kiruthiga et al.</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> Indian Patent</div>
+          <p>Novel synthesis methodology for sulfonyl-thiophene derivatives. Co-inventors: Dr. Panneerselvam Theivendren, Dr. T.R. Yoithapprabhunath, Dr. N. Kiruthiga et al.</p>
+          <span class="patent-type-badge india-badge"><i class="fa-solid fa-certificate"></i> Indian Patent</span>
         </div>
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag flag-uk">
-            <i class="fa-solid fa-flag"></i> United Kingdom
-          </div>
-          <div class="patent-number">Patent #2</div>
+
+        <div class="patent-card reveal">
+          <div class="patent-country uk"><i class="fa-solid fa-flag"></i> United Kingdom</div>
+          <div class="patent-num">Patent #2</div>
           <h4>Novel Pharmaceutical Composition</h4>
-          <p>Co-inventors: Dr. Adarsh Sahu, Jyotika Mishra, Rituparna Palit, Dr. <strong>Natarajan Kiruthiga</strong>, Dr. Ravinesh Mishra et al.</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> UK Design Patent</div>
+          <p>Co-inventors: Dr. Adarsh Sahu, Jyotika Mishra, Rituparna Palit, <strong>Dr. Natarajan Kiruthiga</strong>, Dr. Ravinesh Mishra et al.</p>
+          <span class="patent-type-badge uk-badge"><i class="fa-solid fa-certificate"></i> UK Design Patent</span>
         </div>
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag flag-de">
-            <i class="fa-solid fa-flag"></i> Germany
-          </div>
-          <div class="patent-number">Patent #3</div>
-          <h4>Novel Pharmaceutical Formulation — German Design Patent</h4>
+
+        <div class="patent-card reveal">
+          <div class="patent-country de"><i class="fa-solid fa-flag"></i> Germany</div>
+          <div class="patent-num">Patent #3</div>
+          <h4>Novel Pharmaceutical Formulation &mdash; German Design Patent</h4>
           <p>Co-inventors: Alagiri Abarnadevika, Anbazhagan, Dinesh Raja, <strong>Natarajan Kiruthiga</strong>, Premanandan Sruthi et al.</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> German Patent</div>
+          <span class="patent-type-badge de-badge"><i class="fa-solid fa-certificate"></i> German Patent</span>
         </div>
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag">
-            <i class="fa-solid fa-flag"></i> India
-          </div>
-          <div class="patent-number">Patent #4</div>
+
+        <div class="patent-card reveal">
+          <div class="patent-country india"><i class="fa-solid fa-flag"></i> India</div>
+          <div class="patent-num">Patent #4</div>
           <h4>Drug Interaction Analysis Compound</h4>
           <p>Co-inventors: Dr. R. Suthakaran, Dr. Teelavath Mangilal, Dr. S. Anand Reddy, <strong>Dr. N. Kiruthiga</strong>, Harish Kumar, Dr. Vivek Kumar</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> Indian Patent</div>
+          <span class="patent-type-badge india-badge"><i class="fa-solid fa-certificate"></i> Indian Patent</span>
         </div>
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag">
-            <i class="fa-solid fa-flag"></i> India
-          </div>
-          <div class="patent-number">Patent #5</div>
+
+        <div class="patent-card reveal">
+          <div class="patent-country india"><i class="fa-solid fa-flag"></i> India</div>
+          <div class="patent-num">Patent #5</div>
           <h4>Synthesis of N-(3-(1-((2-chloro-7H-pyrrolo[2,3-d]pyrimidin-4-yl)amino)-2-(substituted) derivatives</h4>
           <p>Co-inventors: T. Sivakumar, <strong>N. Kiruthiga</strong>, T. Prabha, C. Selvinthanuja, E. Manickavalli et al.</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> Indian Patent</div>
+          <span class="patent-type-badge india-badge"><i class="fa-solid fa-certificate"></i> Indian Patent</span>
         </div>
-        <div class="patent-card glass-card reveal">
-          <div class="patent-flag">
-            <i class="fa-solid fa-flag"></i> India
-          </div>
-          <div class="patent-number">Patent #6</div>
+
+        <div class="patent-card reveal">
+          <div class="patent-country india"><i class="fa-solid fa-flag"></i> India</div>
+          <div class="patent-num">Patent #6</div>
           <h4>Synthesis of 7-substituted benzylidene-3-imino-2-phenyl-1-thioxo-hexahydropyrrolo pyrimidine derivatives</h4>
           <p>Co-inventors: <strong>N. Kiruthiga</strong>, C. Selvinthanuja, T. Prabha, T. Sivakumar</p>
-          <div class="patent-type"><i class="fa-solid fa-certificate"></i> Indian Patent</div>
+          <span class="patent-type-badge india-badge"><i class="fa-solid fa-certificate"></i> Indian Patent</span>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Books -->
+  <!-- BOOKS -->
   <section id="books">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Academic Publishing</span>
-        <h2 class="section-title">Books &amp; <span class="gradient-text">Book Chapters</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Academic Publishing</span>
+        <h2 class="section-title">Books &amp; <span class="accent">Book Chapters</span></h2>
       </div>
       <div class="books-grid">
-        <div class="book-card glass-card reveal">
-          <div class="book-icon"><i class="fa-solid fa-book"></i></div>
-          <div class="book-status published">Published</div>
+
+        <div class="book-card reveal">
+          <div class="book-icon-wrap"><i class="fa-solid fa-book"></i></div>
+          <span class="book-status published">Published</span>
           <h4>Text book of Intellectual Property Rights</h4>
           <p class="book-publisher"><i class="fa-solid fa-building"></i> Rubicon Publications, Edition 1</p>
           <p class="book-authors">Dr. S. Muthukumar, <strong>Dr. N. Kiruthiga</strong>, Dr. R. Gayathri, Dr. C. Sundaramoorthi, Dr. A. Dinesh Raja, B. Kamaleshwari</p>
-          <div class="book-meta">
-            <span><i class="fa-solid fa-tag"></i> Co-authored</span>
-          </div>
         </div>
-        <div class="book-card glass-card reveal">
-          <div class="book-icon"><i class="fa-solid fa-book-medical"></i></div>
-          <div class="book-status published">Published · 2024</div>
-          <h4>DRUG DOSSIER – VOL-1</h4>
+
+        <div class="book-card reveal">
+          <div class="book-icon-wrap"><i class="fa-solid fa-book-medical"></i></div>
+          <span class="book-status published">Published &middot; 2024</span>
+          <h4>DRUG DOSSIER &ndash; VOL-1</h4>
           <p class="book-publisher"><i class="fa-solid fa-building"></i> South Asian Academic Publications, 2024</p>
           <p class="book-authors"><strong>Dr. N. Kiruthiga</strong>, Dr. G. Saravanan, Dr. K. Suresh Kumar</p>
-          <div class="book-meta">
-            <span><i class="fa-solid fa-barcode"></i> ISBN: 978-93-92153-09-9</span>
-          </div>
+          <p class="book-isbn">ISBN: 978-93-92153-09-9</p>
         </div>
-        <div class="book-card glass-card reveal">
-          <div class="book-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-          <div class="book-status forthcoming">Forthcoming</div>
+
+        <div class="book-card reveal">
+          <div class="book-icon-wrap"><i class="fa-solid fa-book-open-reader"></i></div>
+          <span class="book-status forthcoming">Forthcoming</span>
           <h4>Next-Generation Translational Medicine: Integrating AI, Systems Biology and Clinical Science</h4>
           <p class="book-publisher"><i class="fa-solid fa-building"></i> Academic Press (Edited Volume)</p>
           <p class="book-authors">Editor: <strong>Dr. N. Kiruthiga</strong>, Dr. Saravanan Govindaraj, Dr. Dinesh Babu, Dr. Asha Josey, Dr. Gayathri Rajaram</p>
-          <div class="book-meta">
-            <span><i class="fa-solid fa-tag"></i> Editor</span>
-          </div>
         </div>
+
       </div>
-      <div class="chapters-section reveal">
-        <h3 class="chapters-title"><i class="fa-solid fa-bookmark"></i> Book Chapters (4)</h3>
+
+      <div class="reveal">
+        <h3 class="chapters-heading"><i class="fa-solid fa-bookmark"></i> Book Chapters (4)</h3>
         <div class="chapters-list">
-          <div class="chapter-item glass-card">
+          <div class="chapter-item">
             <div class="chapter-num">01</div>
             <div>
               <h5>Advancements In Cancer Treatment: Comprehensive Overview of Drug Delivery Methods</h5>
-              <span class="chapter-pub">IIP Series, Volume 3, Book 4, Part 5, Chapter 5 · 2024</span>
+              <span class="chapter-pub">IIP Series, Volume 3, Book 4, Part 5, Chapter 5 &middot; 2024</span>
             </div>
           </div>
-          <div class="chapter-item glass-card">
+          <div class="chapter-item">
             <div class="chapter-num">02</div>
             <div>
               <h5>Pharmacokinetic and Pharmacodynamic Application to Peptides and Proteins in Drug Delivery</h5>
-              <span class="chapter-pub">IIP Series, Volume 3, Book 4, Part 6, Chapter 6 · 2024</span>
+              <span class="chapter-pub">IIP Series, Volume 3, Book 4, Part 6, Chapter 6 &middot; 2024</span>
             </div>
           </div>
-          <div class="chapter-item glass-card">
+          <div class="chapter-item">
             <div class="chapter-num">03</div>
             <div>
               <h5>Success Stories: Impactful Applications of Cancer Biomarkers</h5>
               <span class="chapter-pub">Elsevier Academic Press</span>
             </div>
           </div>
-          <div class="chapter-item glass-card">
+          <div class="chapter-item">
             <div class="chapter-num">04</div>
             <div>
               <h5>Immunity to Immunotherapy in Cancer</h5>
-              <span class="chapter-pub">Academic Press · Cancer Immunotherapy: Pros, Cons, and Beyond (Chapter 14)</span>
+              <span class="chapter-pub">Academic Press &middot; Cancer Immunotherapy: Pros, Cons, and Beyond (Chapter 14)</span>
             </div>
           </div>
         </div>
@@ -552,296 +536,304 @@
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Career Journey</span>
-        <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Career Journey</span>
+        <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
       </div>
-      <div class="timeline-container">
+      <div class="timeline">
+
         <div class="timeline-item reveal">
           <div class="timeline-dot current"></div>
-          <div class="timeline-date">March 2022 – Present</div>
-          <div class="timeline-card glass-card">
+          <div class="timeline-header">
+            <span class="timeline-date">March 2022 &ndash; Present</span>
+            <span class="timeline-duration">Current</span>
+          </div>
+          <div class="timeline-card">
             <div class="timeline-role">Associate Professor</div>
-            <div class="timeline-org"><i class="fa-solid fa-building-columns"></i> KMCH College of Pharmacy, Coimbatore – 641048</div>
+            <div class="timeline-org"><i class="fa-solid fa-building-columns"></i> KMCH College of Pharmacy, Coimbatore &ndash; 641048</div>
             <ul class="timeline-duties">
-              <li>Design, synthesis and evaluation of novel therapeutic moieties</li>
+              <li>Design, synthesis and evaluation of novel therapeutic moieties for pharmacological importance</li>
               <li>Deliver medicinal and organic chemistry curriculum across B.Pharm, Pharm D and M.Pharm programs</li>
               <li>Mentor UG/PG research scholars; NBA Criterion 1 Coordinator</li>
             </ul>
           </div>
         </div>
+
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">February 2011 – February 2022 <span class="duration">11 years</span></div>
-          <div class="timeline-card glass-card">
+          <div class="timeline-header">
+            <span class="timeline-date">February 2011 &ndash; February 2022</span>
+            <span class="timeline-duration">11 years</span>
+          </div>
+          <div class="timeline-card">
             <div class="timeline-role">Associate Professor</div>
             <div class="timeline-org"><i class="fa-solid fa-building-columns"></i> Nandha College of Pharmacy, Erode</div>
             <ul class="timeline-duties">
-              <li>Led department research output — organized 18+ national/international conferences and FDPs</li>
+              <li>Led department research output &mdash; organized 18+ national/international conferences and FDPs</li>
               <li>Drafted and applied for TNSCST and BIRAC research funding</li>
               <li>Established Value Added Program framework (6 courses)</li>
             </ul>
           </div>
         </div>
+
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">December 2007 – October 2009</div>
-          <div class="timeline-card glass-card">
+          <div class="timeline-header">
+            <span class="timeline-date">December 2007 &ndash; October 2009</span>
+          </div>
+          <div class="timeline-card">
             <div class="timeline-role">Assistant Professor</div>
             <div class="timeline-org"><i class="fa-solid fa-building-columns"></i> Erode College of Pharmacy, Erode</div>
           </div>
         </div>
+
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">September 2006 – October 2007</div>
-          <div class="timeline-card glass-card">
+          <div class="timeline-header">
+            <span class="timeline-date">September 2006 &ndash; October 2007</span>
+          </div>
+          <div class="timeline-card">
             <div class="timeline-role">Lecturer</div>
             <div class="timeline-org"><i class="fa-solid fa-building-columns"></i> JKK Natarajah College of Pharmacy, Komarapalayam, Namakkal District</div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Education -->
+  <!-- EDUCATION -->
   <section id="education">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Academic Foundation</span>
-        <h2 class="section-title">Education &amp; <span class="gradient-text">Qualifications</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Academic Foundation</span>
+        <h2 class="section-title">Education &amp; <span class="accent">Qualifications</span></h2>
       </div>
       <div class="edu-grid">
-        <div class="edu-card glass-card reveal">
-          <div class="edu-icon phd"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="edu-years">2014 – 2021</div>
+
+        <div class="edu-card reveal">
+          <span class="edu-degree-badge phd">Ph.D.</span>
+          <div class="edu-years">2014 &ndash; 2021</div>
           <h4>Ph.D., Pharmaceutical Chemistry</h4>
           <p class="edu-institution">The Tamil Nadu Dr. MGR Medical University, Guindy, Chennai</p>
           <p class="edu-thesis"><em>Thesis: Design, Synthesis and Characterization of Lead Flavonoid Analogues and Evaluation of their Biodynamic Properties</em></p>
         </div>
-        <div class="edu-card glass-card reveal">
-          <div class="edu-icon mpharm"><i class="fa-solid fa-flask"></i></div>
-          <div class="edu-years">2004 – 2006</div>
+
+        <div class="edu-card reveal">
+          <span class="edu-degree-badge mpharm">M.Pharm</span>
+          <div class="edu-years">2004 &ndash; 2006</div>
           <h4>M.Pharm, Pharmaceutical Chemistry</h4>
           <p class="edu-institution">JKK Natarajah College of Pharmacy, Komarapalayam, Namakkal District</p>
           <p class="edu-thesis"><em>Thesis: Phytochemical analysis of petroleum and methanolic extract of Scutia myrtina and anti-inflammatory / anti-microbial activity evaluation</em></p>
         </div>
-        <div class="edu-card glass-card reveal">
-          <div class="edu-icon bpharm"><i class="fa-solid fa-mortar-pestle"></i></div>
-          <div class="edu-years">1999 – 2003</div>
+
+        <div class="edu-card reveal">
+          <span class="edu-degree-badge bpharm">B.Pharm</span>
+          <div class="edu-years">1999 &ndash; 2003</div>
           <h4>B.Pharm</h4>
           <p class="edu-institution">Annai JKK Munirajah College of Pharmacy and Research Foundation, Komarapalayam, Namakkal District</p>
-          <p class="edu-thesis"><em>Dissertation: Diabetic Foot Ulcer — A Review</em></p>
+          <p class="edu-thesis"><em>Dissertation: Diabetic Foot Ulcer &mdash; A Review</em></p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Competencies</span>
-        <h2 class="section-title">Key <span class="gradient-text">Skills</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Competencies</span>
+        <h2 class="section-title">Key <span class="accent">Skills</span></h2>
       </div>
-      <div class="skills-container">
-        <div class="skill-group reveal">
+      <div class="skills-grid">
+        <div class="skill-group tech reveal">
           <h3><i class="fa-solid fa-microscope"></i> Research &amp; Technical</h3>
           <div class="skill-tags">
-            <span class="skill-tag tech">Molecular Docking</span>
-            <span class="skill-tag tech">Molecular Dynamics Simulation</span>
-            <span class="skill-tag tech">Virtual Screening</span>
-            <span class="skill-tag tech">QSAR Modelling</span>
-            <span class="skill-tag tech">Python / AI-ML</span>
-            <span class="skill-tag tech">Maestro (Schrödinger)</span>
-            <span class="skill-tag tech">AutoDock</span>
-            <span class="skill-tag tech">BIOVIA Discovery Studio</span>
-            <span class="skill-tag tech">Organic Synthesis</span>
-            <span class="skill-tag tech">NMR / IR / Mass Spectroscopy</span>
-            <span class="skill-tag tech">GraphPad Prism</span>
-            <span class="skill-tag tech">GraphPad InStat</span>
-            <span class="skill-tag tech">ChemDraw</span>
-            <span class="skill-tag tech">ChemSketch</span>
-            <span class="skill-tag tech">Computational Toxicology</span>
+            <span class="skill-tag">Molecular Docking</span>
+            <span class="skill-tag">Molecular Dynamics Simulation</span>
+            <span class="skill-tag">Virtual Screening</span>
+            <span class="skill-tag">QSAR Modelling</span>
+            <span class="skill-tag">Python / AI-ML</span>
+            <span class="skill-tag">Maestro (Schrödinger)</span>
+            <span class="skill-tag">AutoDock</span>
+            <span class="skill-tag">BIOVIA Discovery Studio</span>
+            <span class="skill-tag">Organic Synthesis</span>
+            <span class="skill-tag">NMR / IR / Mass Spectroscopy</span>
+            <span class="skill-tag">GraphPad Prism</span>
+            <span class="skill-tag">GraphPad InStat</span>
+            <span class="skill-tag">ChemDraw</span>
+            <span class="skill-tag">ChemSketch</span>
+            <span class="skill-tag">Computational Toxicology</span>
           </div>
         </div>
-        <div class="skill-group reveal">
+        <div class="skill-group acad reveal">
           <h3><i class="fa-solid fa-chalkboard-user"></i> Academic &amp; Leadership</h3>
           <div class="skill-tags">
-            <span class="skill-tag academic">Curriculum Design</span>
-            <span class="skill-tag academic">Research Mentorship</span>
-            <span class="skill-tag academic">Grant Writing (DST/ICMR/BIRAC)</span>
-            <span class="skill-tag academic">NBA/NAAC Accreditation</span>
-            <span class="skill-tag academic">ISO 21001 Integration</span>
-            <span class="skill-tag academic">Peer Review (Elsevier/Springer)</span>
-            <span class="skill-tag academic">Question Paper Setting</span>
-            <span class="skill-tag academic">B.Pharm · Pharm D · M.Pharm Teaching</span>
-            <span class="skill-tag academic">Outcome-Based Education</span>
-            <span class="skill-tag academic">Event Coordination</span>
+            <span class="skill-tag">Curriculum Design</span>
+            <span class="skill-tag">Research Mentorship</span>
+            <span class="skill-tag">Grant Writing (DST/ICMR/BIRAC)</span>
+            <span class="skill-tag">NBA/NAAC Accreditation</span>
+            <span class="skill-tag">ISO 21001 Integration</span>
+            <span class="skill-tag">Peer Review (Elsevier/Springer)</span>
+            <span class="skill-tag">Question Paper Setting</span>
+            <span class="skill-tag">B.Pharm &middot; Pharm D &middot; M.Pharm Teaching</span>
+            <span class="skill-tag">Outcome-Based Education</span>
+            <span class="skill-tag">Event Coordination</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Leadership -->
+  <!-- LEADERSHIP -->
   <section id="leadership">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Impact &amp; Service</span>
-        <h2 class="section-title">Leadership &amp; <span class="gradient-text">Contributions</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Impact &amp; Service</span>
+        <h2 class="section-title">Leadership &amp; <span class="accent">Contributions</span></h2>
       </div>
       <div class="leadership-grid">
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
           <h4>NBA Criterion 1 Coordinator</h4>
           <p>Led outcome-based accreditation strategy for National Board of Accreditation criteria, strengthening institutional competitive positioning.</p>
         </div>
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-gavel"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-gavel"></i></div>
           <h4>PCI Inspector (Nominated)</h4>
           <p>Nominated by the Pharmacy Council of India to serve as Inspector for pharmacy institution evaluations per council regulations.</p>
         </div>
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-users-between-lines"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-users-between-lines"></i></div>
           <h4>Ph.D. Advisory Committee Member</h4>
-          <p>External Member, Ph.D. Research Advisory Committee, Vinayaka Mission's Research Foundation (Deemed University), Salem — February 2026 to present.</p>
+          <p>External Member, Ph.D. Research Advisory Committee, Vinayaka Mission's Research Foundation (Deemed University), Salem &mdash; February 2026 to present.</p>
         </div>
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-lightbulb"></i></div>
           <h4>Institution Innovation Council</h4>
           <p>Active member organizing Entrepreneurship and YUKTHI activities; promotes research-to-innovation translation among students.</p>
         </div>
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-chalkboard"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-chalkboard"></i></div>
           <h4>Value Added Program Coordinator</h4>
           <p>Coordinated 6 intensive courses: First Aid, Fire Safety, Scientific Writing, Data Integrity, Mental Health &amp; Physical Safety, Life Skills Management.</p>
         </div>
-        <div class="leader-card glass-card reveal">
-          <div class="leader-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="leader-card reveal">
+          <div class="leader-icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
           <h4>18 Conferences &amp; FDPs Organized</h4>
           <p>Led organization of 18 National/International Conferences, Seminars, Faculty Development Programmes, and Webinars including AICTE-sponsored events.</p>
         </div>
       </div>
-      <div class="evaluator-section reveal">
-        <h3 class="chapters-title"><i class="fa-solid fa-award"></i> Evaluator &amp; External Committee Roles</h3>
-        <div class="evaluator-list glass-card">
+
+      <div class="evaluator-box reveal">
+        <h3 class="evaluator-heading"><i class="fa-solid fa-award"></i> Evaluator &amp; External Committee Roles</h3>
+        <div class="eval-items">
           <div class="eval-item">
             <i class="fa-solid fa-circle-check"></i>
-            <span>International Conference Evaluator — AIMST International Conference on Health Science and Technology (AICHST 2023), AIMST University, Kedah, Malaysia · 24 Nov 2023</span>
+            <span>International Conference Evaluator &mdash; AIMST International Conference on Health Science and Technology (AICHST 2023), AIMST University, Kedah, Malaysia &middot; 24 Nov 2023</span>
           </div>
           <div class="eval-item">
             <i class="fa-solid fa-circle-check"></i>
-            <span>International Conference Evaluator — 1st International Joint Conference on Medical &amp; Health Sciences (IJCMHS 2024), VISTAS–UCMI · 23–24 Jul 2024</span>
+            <span>International Conference Evaluator &mdash; 1st International Joint Conference on Medical &amp; Health Sciences (IJCMHS 2024), VISTAS&ndash;UCMI &middot; 23&ndash;24 Jul 2024</span>
           </div>
           <div class="eval-item">
             <i class="fa-solid fa-circle-check"></i>
-            <span>External Ph.D. Advisory Committee Member — Vinayaka Mission's Research Foundation (Deemed University), Salem · February 2026 to Present</span>
+            <span>External Ph.D. Advisory Committee Member &mdash; Vinayaka Mission's Research Foundation (Deemed University), Salem &middot; February 2026 to Present</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Get in Touch</span>
-        <h2 class="section-title">Contact <span class="gradient-text">Dr. Kiruthiga</span></h2>
-        <div class="section-line"></div>
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Contact <span class="accent">Dr. Kiruthiga</span></h2>
       </div>
       <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-items reveal">
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <span class="contact-label">Email</span>
               <a href="mailto:kiruthigagovindaraj@gmail.com" class="contact-value">kiruthigagovindaraj@gmail.com</a>
             </div>
           </div>
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-solid fa-phone"></i></div>
             <div>
               <span class="contact-label">Mobile</span>
               <a href="tel:+919994143588" class="contact-value">+91 99941 43588</a>
             </div>
           </div>
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <span class="contact-label">Location</span>
-              <span class="contact-value">Coimbatore, Tamil Nadu, India<br><small>(Open to relocating to Chennai)</small></span>
+              <span class="contact-value">Coimbatore, Tamil Nadu, India<br><small style="color:var(--gray-400);font-weight:400;">(Open to relocating to Chennai)</small></span>
             </div>
           </div>
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-brands fa-linkedin"></i></div>
             <div>
               <span class="contact-label">LinkedIn</span>
               <a href="https://linkedin.com/in/kiruthiga-govindaraj-898b456a" target="_blank" rel="noopener" class="contact-value">kiruthiga-govindaraj-898b456a</a>
             </div>
           </div>
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-brands fa-orcid"></i></div>
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-brands fa-orcid"></i></div>
             <div>
               <span class="contact-label">ORCID</span>
               <a href="https://orcid.org/0000-0002-7230-2003" target="_blank" rel="noopener" class="contact-value">0000-0002-7230-2003</a>
             </div>
           </div>
-          <div class="contact-item glass-card">
-            <div class="contact-icon"><i class="fa-brands fa-google-scholar"></i></div>
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><i class="fa-brands fa-google-scholar"></i></div>
             <div>
               <span class="contact-label">Google Scholar</span>
               <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="contact-value">View Publications Profile</a>
             </div>
           </div>
         </div>
-        <div class="contact-map-card glass-card reveal">
-          <div class="contact-map-header">
-            <i class="fa-solid fa-building-columns"></i>
+        <div class="institution-card reveal">
+          <div class="inst-icon-row">
+            <div class="inst-icon"><i class="fa-solid fa-building-columns"></i></div>
             <div>
-              <h4>KMCH College of Pharmacy</h4>
-              <p>Coimbatore – 641048, Tamil Nadu, India</p>
+              <div class="inst-name">KMCH College of Pharmacy</div>
+              <div class="inst-location">Coimbatore &ndash; 641048, Tamil Nadu, India</div>
             </div>
           </div>
-          <div class="contact-map-info">
-            <p>Department of Pharmaceutical Chemistry</p>
-            <p>KMCH College of Pharmacy is a premier pharmacy institution in Coimbatore, offering B.Pharm, Pharm D, and M.Pharm programs with a strong emphasis on research and innovation.</p>
-          </div>
-          <div class="contact-affiliations">
-            <span><i class="fa-solid fa-circle-check"></i> PCI Approved</span>
-            <span><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
-            <span><i class="fa-solid fa-circle-check"></i> AICTE Approved</span>
+          <div class="inst-dept">Department of Pharmaceutical Chemistry</div>
+          <p class="inst-desc">KMCH College of Pharmacy is a premier pharmacy institution in Coimbatore, offering B.Pharm, Pharm D, and M.Pharm programs with a strong emphasis on research and innovation.</p>
+          <div class="inst-badges">
+            <span class="inst-badge"><i class="fa-solid fa-circle-check"></i> PCI Approved</span>
+            <span class="inst-badge"><i class="fa-solid fa-circle-check"></i> NBA Accredited</span>
+            <span class="inst-badge"><i class="fa-solid fa-circle-check"></i> AICTE Approved</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer id="footer">
-    <div class="footer-bg">
-      <svg class="footer-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-        <path fill="rgba(0,212,255,0.03)" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,186.7C672,203,768,181,864,165.3C960,149,1056,139,1152,133.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-      </svg>
-    </div>
-    <div class="container footer-inner">
-      <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">
-            <i class="fa-solid fa-atom"></i>
-            <span>Dr. N. Kiruthiga</span>
+          <div class="footer-logo-row">
+            <div class="footer-logo-icon"><i class="fa-solid fa-atom"></i></div>
+            <span class="footer-brand-name">Dr. N. Kiruthiga</span>
           </div>
-          <p>Associate Professor of Pharmaceutical Chemistry · Researcher · Innovator</p>
+          <p class="footer-tagline">Associate Professor of Pharmaceutical Chemistry &middot; Researcher &middot; Innovator</p>
           <p class="footer-inst">KMCH College of Pharmacy, Coimbatore</p>
         </div>
-        <div class="footer-links-col">
+        <div class="footer-col">
           <h5>Quick Links</h5>
           <ul>
             <li><a href="#about">About</a></li>
@@ -851,7 +843,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
+        <div class="footer-col">
           <h5>Academic Profiles</h5>
           <ul>
             <li><a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a></li>
@@ -861,7 +853,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Dr. N. Kiruthiga · All rights reserved</p>
+        <p>&copy; 2026 Dr. N. Kiruthiga &middot; All rights reserved</p>
         <p>kirunatarajanlab.com</p>
       </div>
     </div>
