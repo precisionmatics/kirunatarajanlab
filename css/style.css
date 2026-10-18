@@ -456,8 +456,8 @@ section.bg-subtle { background: var(--bg-subtle); }
   padding: 24px;
   box-shadow: var(--shadow-sm);
 }
-.vm-card.vision { border-left: 3px solid var(--teal); }
-.vm-card.mission { border-left: 3px solid var(--blue); }
+.vm-card.vision { }
+.vm-card.mission { }
 .vm-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .vm-header h3 {
   font-family: var(--font-display);
