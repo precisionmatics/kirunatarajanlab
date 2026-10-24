@@ -19,7 +19,7 @@ if (progressBar && !CSS.supports('animation-timeline', 'scroll()')) {
   }, { passive: true });
 }
 
-// ── Reveal on scroll (IntersectionObserver) ──────────
+// ── Reveal on scroll ──────────────────────────────────
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -28,12 +28,10 @@ const revealObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ── Animated counters ─────────────────────────────────
 function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-
 function runCounter(el) {
   const target = parseFloat(el.dataset.target);
   const isDecimal = el.classList.contains('stat-decimal');
@@ -49,17 +47,16 @@ function runCounter(el) {
   requestAnimationFrame(step);
 }
 
-// Hero stats are always visible on load — trigger after hero load delay
+// Hero stats are visible on load — trigger after hero animations settle
 const heroCounters = document.querySelectorAll('.hero-stats-strip .stat-number[data-target]');
-setTimeout(() => heroCounters.forEach(runCounter), 900);
+if (heroCounters.length) setTimeout(() => heroCounters.forEach(runCounter), 900);
 
-// Remaining counters use IntersectionObserver
+// Remaining counters via IntersectionObserver
 const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { runCounter(e.target); counterObserver.unobserve(e.target); }
   });
 }, { threshold: 0.3 });
-
 document.querySelectorAll('.stat-number[data-target]').forEach(el => {
   if (!el.closest('.hero-stats-strip')) counterObserver.observe(el);
 });
@@ -89,6 +86,13 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
+// ── Active nav — URL-based (works on all pages) ───────
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => {
+  const href = a.getAttribute('href');
+  if (href === currentPage) a.classList.add('active');
+});
+
 // ── Mobile menu ───────────────────────────────────────
 const toggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
@@ -96,18 +100,6 @@ if (toggle && navLinks) {
   toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 }
-
-// ── Active nav link on scroll ─────────────────────────
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
-const spy = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => spy.observe(s));
 
 // ── Back to top ───────────────────────────────────────
 const backToTop = document.getElementById('back-to-top');
