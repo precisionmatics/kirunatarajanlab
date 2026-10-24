@@ -1,67 +1,119 @@
-// Typewriter
-const phrases = ["Computer-Aided Drug Design", "AI Drug Discovery", "Marine Bioactives", "Medicinal Chemistry"];
-let phraseIdx = 0, charIdx = 0, deleting = false;
-const el = document.getElementById("typewriter");
+// ── Stagger delays on grid children ──────────────────
+document.querySelectorAll('.stagger').forEach(container => {
+  container.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.setProperty('--reveal-delay', `${i * 75}ms`);
+  });
+});
 
-function tick() {
-  const phrase = phrases[phraseIdx];
-  if (!deleting) {
-    el.textContent = phrase.slice(0, ++charIdx);
-    if (charIdx === phrase.length) { deleting = true; setTimeout(tick, 1800); return; }
-  } else {
-    el.textContent = phrase.slice(0, --charIdx);
-    if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
-  }
-  setTimeout(tick, deleting ? 45 : 80);
+// ── Hero stat item stagger indices ───────────────────
+document.querySelectorAll('.hero-stat-item').forEach((el, i) => {
+  el.style.setProperty('--i', i);
+});
+
+// ── Scroll progress (JS fallback for non-supporting browsers) ──
+const progressBar = document.getElementById('scroll-progress');
+if (progressBar && !CSS.supports('animation-timeline', 'scroll()')) {
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    progressBar.style.transform = `scaleX(${pct})`;
+  }, { passive: true });
 }
-if (el) setTimeout(tick, 600);
 
-// IntersectionObserver — .reveal → .visible
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); observer.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+// ── Reveal on scroll (IntersectionObserver) ──────────
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-// Animated counters
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Animated counters ─────────────────────────────────
 function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-function animateCounter(el) {
-  const target = +el.dataset.target, duration = 2000, start = performance.now();
+
+function runCounter(el) {
+  const target = parseFloat(el.dataset.target);
+  const isDecimal = el.classList.contains('stat-decimal');
+  const duration = 1800;
+  const start = performance.now();
   function step(now) {
     const p = Math.min((now - start) / duration, 1);
-    el.textContent = Math.round(easeOut(p) * target);
+    const val = easeOut(p) * target;
+    el.textContent = isDecimal ? val.toFixed(1) : Math.round(val);
     if (p < 1) requestAnimationFrame(step);
+    else el.textContent = isDecimal ? target.toFixed(1) : target;
   }
   requestAnimationFrame(step);
 }
+
+// Hero stats are always visible on load — trigger after hero load delay
+const heroCounters = document.querySelectorAll('.hero-stats-strip .stat-number[data-target]');
+setTimeout(() => heroCounters.forEach(runCounter), 900);
+
+// Remaining counters use IntersectionObserver
 const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); }
+    if (e.isIntersecting) { runCounter(e.target); counterObserver.unobserve(e.target); }
   });
 }, { threshold: 0.3 });
-document.querySelectorAll(".stat-number[data-target]").forEach(el => counterObserver.observe(el));
 
-// Navbar scroll
-const nav = document.querySelector(".navbar");
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 60);
-}, { passive: true });
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  if (!el.closest('.hero-stats-strip')) counterObserver.observe(el);
+});
 
-// Mobile menu toggle
-const toggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-if (toggle && navLinks) {
-  toggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-  navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+// ── Typewriter ────────────────────────────────────────
+const twEl = document.getElementById('typewriterText');
+if (twEl) {
+  const phrases = ['Computer-Aided Drug Design', 'AI-Driven Drug Discovery', 'Marine Bioactives', 'Medicinal Chemistry', 'HDAC Inhibitor Design'];
+  let phraseIdx = 0, charIdx = 0, deleting = false;
+  function tick() {
+    const phrase = phrases[phraseIdx];
+    if (!deleting) {
+      twEl.textContent = phrase.slice(0, ++charIdx);
+      if (charIdx === phrase.length) { deleting = true; setTimeout(tick, 2000); return; }
+    } else {
+      twEl.textContent = phrase.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 40 : 75);
+  }
+  setTimeout(tick, 1200);
 }
 
-// Active nav link on scroll
-const sections = document.querySelectorAll("section[id]");
-const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+// ── Navbar scroll shadow ──────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ── Mobile menu ───────────────────────────────────────
+const toggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+}
+
+// ── Active nav link on scroll ─────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
 const spy = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      navItems.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+      navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
     }
   });
-}, { rootMargin: "-40% 0px -55% 0px" });
+}, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => spy.observe(s));
+
+// ── Back to top ───────────────────────────────────────
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+}

@@ -20,6 +20,9 @@
 </head>
 <body>
 
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+  <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
   <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-container">
@@ -45,31 +48,33 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
-    <div class="container hero-container">
-      <div class="hero-left">
-        <div class="hero-badge reveal">
+    <div class="hero-body container">
+      <div class="hero-content">
+        <div class="hero-badge">
           <i class="fa-solid fa-flask-vial"></i>
           Associate Professor &middot; Pharmaceutical Chemistry
         </div>
-        <h1 class="hero-name reveal">Dr. N. Kiruthiga</h1>
-        <p class="hero-institution reveal">
+        <h1 class="hero-name">
+          <span>Dr. N.</span>
+          <span>Kiruthiga</span>
+        </h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-institution">
           <i class="fa-solid fa-building-columns"></i>
-          KMCH College of Pharmacy, Coimbatore &ndash; 641048, Tamil Nadu, India
+          KMCH College of Pharmacy, Coimbatore, Tamil Nadu, India
         </p>
-        <div class="hero-typewriter reveal">
-          <span class="typewriter-static">Pioneering </span><span id="typewriterText"></span><span class="typewriter-cursor">|</span>
+        <div class="hero-typewriter">
+          <span class="typewriter-static">Pioneering </span><span id="typewriterText"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
         </div>
-        <div class="hero-cta reveal">
+        <div class="hero-cta">
           <a href="#about" class="btn-primary">
             <i class="fa-solid fa-microscope"></i> Explore Research
           </a>
           <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn-secondary">
-            <i class="fa-brands fa-google-scholar"></i> View Publications
+            <i class="fa-brands fa-google-scholar"></i> Publications
           </a>
         </div>
-        <div class="hero-social reveal">
+        <div class="hero-social">
           <a href="mailto:kiruthigagovindaraj@gmail.com" class="hero-social-link" aria-label="Email">
             <i class="fa-solid fa-envelope"></i>
           </a>
@@ -84,37 +89,41 @@
           </a>
         </div>
       </div>
-      <div class="hero-right reveal">
-        <div class="stat-tiles">
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number" data-target="41">0</span></div>
-            <div class="stat-tile-label">Publications</div>
-            <div class="stat-tile-sub">Scopus / WoS / PubMed</div>
+    </div>
+
+    <!-- Stats strip — bottom of hero -->
+    <div class="hero-stats-strip">
+      <div class="container">
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number" data-target="41">0</span></div>
+            <div class="hero-stat-label">Publications</div>
+            <div class="hero-stat-sub">Scopus / WoS / PubMed</div>
           </div>
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number" data-target="6">0</span></div>
-            <div class="stat-tile-label">Patents</div>
-            <div class="stat-tile-sub">India &middot; UK &middot; Germany</div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number" data-target="6">0</span></div>
+            <div class="hero-stat-label">Patents</div>
+            <div class="hero-stat-sub">India &middot; UK &middot; Germany</div>
           </div>
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number stat-decimal" data-target="18.5">0</span><span class="stat-plus">+</span></div>
-            <div class="stat-tile-label">Years Experience</div>
-            <div class="stat-tile-sub">Teaching &amp; Research</div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number stat-decimal" data-target="18.5">0</span><span class="stat-plus">+</span></div>
+            <div class="hero-stat-label">Years Experience</div>
+            <div class="hero-stat-sub">Teaching &amp; Research</div>
           </div>
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number" data-target="3">0</span></div>
-            <div class="stat-tile-label">Books</div>
-            <div class="stat-tile-sub">2 Published &middot; 1 Forthcoming</div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number" data-target="3">0</span></div>
+            <div class="hero-stat-label">Books</div>
+            <div class="hero-stat-sub">2 Published &middot; 1 Forthcoming</div>
           </div>
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number" data-target="35">0</span><span class="stat-plus">+</span></div>
-            <div class="stat-tile-label">Students Mentored</div>
-            <div class="stat-tile-sub">UG &amp; PG Projects</div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number" data-target="35">0</span><span class="stat-plus">+</span></div>
+            <div class="hero-stat-label">Students Mentored</div>
+            <div class="hero-stat-sub">UG &amp; PG Projects</div>
           </div>
-          <div class="stat-tile">
-            <div class="stat-tile-num"><span class="stat-number" data-target="17">0</span></div>
-            <div class="stat-tile-label">Q1/Q2 Papers</div>
-            <div class="stat-tile-sub">Published 2025&ndash;2026</div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num"><span class="stat-number" data-target="17">0</span></div>
+            <div class="hero-stat-label">Q1/Q2 Papers</div>
+            <div class="hero-stat-sub">Published 2025&ndash;2026</div>
           </div>
         </div>
       </div>
@@ -130,14 +139,8 @@
       </div>
       <div class="about-grid">
         <div class="about-left reveal">
-          <p class="about-summary">
-            Associate Professor of Pharmaceutical Chemistry with over <strong>18.5 years of teaching experience</strong> and a sustained, fast-growing research record in computer-aided drug design and medicinal chemistry.
-          </p>
-          <p class="about-detail">
-            Research core centers on the design, synthesis and computational-to-experimental evaluation of flavonoid, chromone, pyrazoline and heterocyclic scaffolds against diabetes, inflammation, infection and cancer targets, with current work extending into HDAC-inhibitor design, machine-learning-assisted drug discovery, and marine bioactive compounds.
-          </p>
-          <p class="about-detail">
-            Author of <strong>41 peer-reviewed publications</strong> (predominantly Scopus/Web of Science/PubMed-indexed, including 18 in Q1/Q2 journals since 2025), <strong>6 patents</strong>, 3 authored/edited books and 4 book chapters, alongside a strong record of UG/PG mentorship, NBA/NAAC accreditation leadership, and peer review for Elsevier, Springer and Bentham Science journals.
+          <p class="about-lead">
+            Associate Professor with <strong>18.5 years</strong> of teaching and research, pioneering the translation of computational insight into medicinal molecules — flavonoids, heterocycles, and HDAC inhibitors designed in silico, validated in vitro.
           </p>
           <div class="about-highlights">
             <div class="highlight-item">
@@ -154,7 +157,7 @@
             </div>
             <div class="highlight-item">
               <i class="fa-solid fa-circle-check"></i>
-              <span>Reviewer: Elsevier, Springer, Bentham Science</span>
+              <span>Peer Reviewer — Elsevier, Springer, Bentham Science</span>
             </div>
           </div>
         </div>
@@ -165,7 +168,7 @@
                 <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
                 <h3>Vision</h3>
               </div>
-              <p>To advance drug discovery through computational and medicinal chemistry, and to build institutional research strength through funded research, scholarly output, and academic excellence.</p>
+              <p>Advance drug discovery through computational and medicinal chemistry; build institutional research strength through funded projects and scholarly output.</p>
             </div>
             <div class="vm-card mission">
               <div class="vm-header">
@@ -174,8 +177,8 @@
               </div>
               <ul>
                 <li>Secure extramural grants (DST, ICMR, AICTE, BIRAC, TNSCST)</li>
-                <li>Mentor UG/PG/PhD scholars toward publication-ready, patentable research</li>
-                <li>Elevate institutional accreditation standing through outcome-based education</li>
+                <li>Mentor UG/PG/PhD scholars toward publication-ready research</li>
+                <li>Elevate institutional accreditation through outcome-based education</li>
               </ul>
             </div>
           </div>
@@ -185,13 +188,13 @@
   </section>
 
   <!-- RESEARCH AREAS -->
-  <section id="research" class="bg-subtle">
+  <section id="research">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header reveal with-deco" data-deco="7">
         <span class="section-label">Expertise</span>
         <h2 class="section-title">Core <span class="accent">Research Areas</span></h2>
       </div>
-      <div class="research-grid">
+      <div class="research-grid stagger">
         <div class="research-card reveal">
           <div class="research-icon-wrap teal"><i class="fa-solid fa-computer"></i></div>
           <h3>Computer-Aided Drug Design</h3>
@@ -203,7 +206,7 @@
         <div class="research-card reveal">
           <div class="research-icon-wrap purple"><i class="fa-solid fa-vial"></i></div>
           <h3>Medicinal Chemistry</h3>
-          <p>Design and synthesis of flavonoid, chromone, pyrazoline and heterocyclic scaffolds with spectroscopic characterization (NMR, IR, Mass).</p>
+          <p>Design and synthesis of flavonoid, chromone, pyrazoline and heterocyclic scaffolds with full spectroscopic characterization.</p>
           <div class="research-tags">
             <span>Flavonoids</span><span>Chromones</span><span>Pyrazolines</span>
           </div>
@@ -219,7 +222,7 @@
         <div class="research-card reveal">
           <div class="research-icon-wrap red"><i class="fa-solid fa-dna"></i></div>
           <h3>HDAC Inhibitor Design</h3>
-          <p>Design and synthesis of HDAC inhibitors for apoptosis induction in human cervical cancer cells, including piperidine hydroxamate scaffolds.</p>
+          <p>Design and synthesis of HDAC inhibitors for apoptosis induction in cervical cancer cells, including piperidine hydroxamate scaffolds.</p>
           <div class="research-tags">
             <span>HDAC</span><span>Apoptosis</span><span>Cancer</span>
           </div>
@@ -227,7 +230,7 @@
         <div class="research-card reveal">
           <div class="research-icon-wrap green"><i class="fa-solid fa-brain"></i></div>
           <h3>AI &amp; Machine Learning</h3>
-          <p>Machine learning and explainable AI applications in cheminformatics and drug discovery; Python-based tools for molecular fingerprint visualization.</p>
+          <p>Machine learning and explainable AI in cheminformatics; Python-based tools for molecular fingerprint visualization and prediction.</p>
           <div class="research-tags">
             <span>Explainable AI</span><span>Cheminformatics</span><span>Python</span>
           </div>
@@ -235,7 +238,7 @@
         <div class="research-card reveal">
           <div class="research-icon-wrap cyan"><i class="fa-solid fa-water"></i></div>
           <h3>Marine Bioactive Compounds</h3>
-          <p>Marine bioactive molecules as antiviral (HMPV, Nipah, Zika) and antimicrobial agents with focus on natural product drug discovery.</p>
+          <p>Marine bioactive molecules as antiviral (HMPV, Nipah, Zika) and antimicrobial agents through natural product drug discovery.</p>
           <div class="research-tags">
             <span>Antiviral</span><span>Marine Natural Products</span><span>HMPV</span>
           </div>
@@ -243,7 +246,7 @@
         <div class="research-card reveal">
           <div class="research-icon-wrap blue"><i class="fa-solid fa-flask"></i></div>
           <h3>Spectroscopic Analysis</h3>
-          <p>Structure elucidation and characterization using Nuclear Magnetic Resonance (NMR), Infrared (IR) spectroscopy, and Mass spectrometry.</p>
+          <p>Structure elucidation and characterization using NMR, Infrared spectroscopy, and Mass spectrometry for synthesized compounds.</p>
           <div class="research-tags">
             <span>NMR</span><span>IR Spectroscopy</span><span>Mass Spec</span>
           </div>
@@ -255,14 +258,14 @@
   <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header reveal with-deco" data-deco="41">
         <span class="section-label">Scholarly Output</span>
         <h2 class="section-title">Selected <span class="accent">Publications</span></h2>
-        <p class="section-subtitle">41 peer-reviewed publications (2007&ndash;2026) &middot; Scopus / WoS / PubMed indexed &middot; Impact factors up to 4.7</p>
+        <p class="section-subtitle">41 peer-reviewed &middot; Scopus / WoS / PubMed &middot; Impact factors up to 4.7</p>
       </div>
       <div class="pubs-meta reveal">
         <i class="fa-solid fa-circle-info"></i>
-        Showing 12 selected high-impact publications. <strong>17 Q1/Q2 papers published in 2025&ndash;2026 alone.</strong>
+        Showing 12 selected publications. <strong>17 Q1/Q2 papers in 2025&ndash;2026 alone.</strong>
       </div>
       <div class="publications-list">
 
@@ -396,19 +399,19 @@
   </section>
 
   <!-- PATENTS -->
-  <section id="patents" class="bg-subtle">
+  <section id="patents">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header reveal with-deco" data-deco="6">
         <span class="section-label">Intellectual Property</span>
         <h2 class="section-title">Patents &amp; <span class="accent">Innovations</span></h2>
       </div>
-      <div class="patents-grid">
+      <div class="patents-grid stagger">
 
         <div class="patent-card reveal">
           <div class="patent-country india"><i class="fa-solid fa-flag"></i> India</div>
           <div class="patent-num">Patent #1</div>
           <h4>Synthesis of 4-methyl-2-((2-(2-nitrophenyl)-1-phenylvinyl)sulfonyl)thiophene</h4>
-          <p>Novel synthesis methodology for sulfonyl-thiophene derivatives. Co-inventors: Dr. Panneerselvam Theivendren, Dr. T.R. Yoithapprabhunath, Dr. N. Kiruthiga et al.</p>
+          <p>Novel synthesis methodology for sulfonyl-thiophene derivatives.</p>
           <span class="patent-type-badge india-badge"><i class="fa-solid fa-certificate"></i> Indian Patent</span>
         </div>
 
@@ -423,7 +426,7 @@
         <div class="patent-card reveal">
           <div class="patent-country de"><i class="fa-solid fa-flag"></i> Germany</div>
           <div class="patent-num">Patent #3</div>
-          <h4>Novel Pharmaceutical Formulation &mdash; German Design Patent</h4>
+          <h4>Novel Pharmaceutical Formulation</h4>
           <p>Co-inventors: Alagiri Abarnadevika, Anbazhagan, Dinesh Raja, <strong>Natarajan Kiruthiga</strong>, Premanandan Sruthi et al.</p>
           <span class="patent-type-badge de-badge"><i class="fa-solid fa-certificate"></i> German Patent</span>
         </div>
@@ -463,7 +466,7 @@
         <span class="section-label">Academic Publishing</span>
         <h2 class="section-title">Books &amp; <span class="accent">Book Chapters</span></h2>
       </div>
-      <div class="books-grid">
+      <div class="books-grid stagger">
 
         <div class="book-card reveal">
           <div class="book-icon-wrap"><i class="fa-solid fa-book"></i></div>
@@ -529,7 +532,7 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="bg-subtle">
+  <section id="experience">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Career Journey</span>
@@ -604,14 +607,14 @@
         <span class="section-label">Academic Foundation</span>
         <h2 class="section-title">Education &amp; <span class="accent">Qualifications</span></h2>
       </div>
-      <div class="edu-grid">
+      <div class="edu-grid stagger">
 
         <div class="edu-card reveal">
           <span class="edu-degree-badge phd">Ph.D.</span>
           <div class="edu-years">2014 &ndash; 2021</div>
           <h4>Ph.D., Pharmaceutical Chemistry</h4>
           <p class="edu-institution">The Tamil Nadu Dr. MGR Medical University, Guindy, Chennai</p>
-          <p class="edu-thesis"><em>Thesis: Design, Synthesis and Characterization of Lead Flavonoid Analogues and Evaluation of their Biodynamic Properties</em></p>
+          <p class="edu-thesis"><em>Design, Synthesis and Characterization of Lead Flavonoid Analogues and Evaluation of their Biodynamic Properties</em></p>
         </div>
 
         <div class="edu-card reveal">
@@ -619,7 +622,7 @@
           <div class="edu-years">2004 &ndash; 2006</div>
           <h4>M.Pharm, Pharmaceutical Chemistry</h4>
           <p class="edu-institution">JKK Natarajah College of Pharmacy, Komarapalayam, Namakkal District</p>
-          <p class="edu-thesis"><em>Thesis: Phytochemical analysis of petroleum and methanolic extract of Scutia myrtina and anti-inflammatory / anti-microbial activity evaluation</em></p>
+          <p class="edu-thesis"><em>Phytochemical analysis of petroleum and methanolic extract of Scutia myrtina and anti-inflammatory / anti-microbial activity evaluation</em></p>
         </div>
 
         <div class="edu-card reveal">
@@ -635,7 +638,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="bg-subtle">
+  <section id="skills">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Competencies</span>
@@ -694,7 +697,7 @@
         <span class="section-label">Impact &amp; Service</span>
         <h2 class="section-title">Leadership &amp; <span class="accent">Contributions</span></h2>
       </div>
-      <div class="leadership-grid">
+      <div class="leadership-grid stagger">
         <div class="leader-card reveal">
           <div class="leader-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
           <h4>NBA Criterion 1 Coordinator</h4>
@@ -748,7 +751,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="bg-subtle">
+  <section id="contact">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Get in Touch</span>
