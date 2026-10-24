@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Research areas of Dr. N. Kiruthiga — Computer-Aided Drug Design, Medicinal Chemistry, HDAC Inhibitors, AI/ML in Cheminformatics, Marine Bioactives, and more." />
+  <meta name="description" content="Research areas of Dr. N. Kiruthiga — Computer-Aided Drug Design, Medicinal Chemistry, HDAC Inhibitors, AI/ML, Marine Bioactives, and more." />
   <meta name="author" content="Dr. N. Kiruthiga" />
-  <title>Research Areas | Dr. N. Kiruthiga</title>
+  <title>Research | Dr. N. Kiruthiga</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -15,7 +15,6 @@
 <body>
 
   <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
-
   <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <!-- NAVBAR -->
@@ -37,120 +36,186 @@
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
+  <!-- PAGE HERO — full-width with molecular SVG background -->
+  <section class="research-page-hero">
+    <!-- Molecular background: small ligand motif + hex grid, right side -->
+    <div class="rph-mol-bg" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 300" fill="none">
+        <defs>
+          <pattern id="rph-hex" x="0" y="0" width="30" height="26" patternUnits="userSpaceOnUse">
+            <path d="M15,0 L30,7.5 L30,18.5 L15,26 L0,18.5 L0,7.5Z"
+                  fill="none" stroke="rgba(13,148,136,0.09)" stroke-width="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="340" height="300" fill="url(#rph-hex)"/>
+        <!-- Small ligand molecule -->
+        <g transform="translate(170,150)">
+          <polygon points="0,-38 33,-19 33,19 0,38 -33,19 -33,-19"
+                   fill="rgba(180,83,9,0.07)" stroke="#b45309" stroke-width="2" opacity="0.6"/>
+          <polygon points="0,-27 23,-13.5 23,13.5 0,27 -23,13.5 -23,-13.5"
+                   fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.45"/>
+          <circle cx="0"   cy="-38" r="6"   fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" opacity="0.75"/>
+          <circle cx="33"  cy="-19" r="5.5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="33"  cy="19"  r="6"   fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5" opacity="0.75"/>
+          <circle cx="0"   cy="38"  r="5.5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="-33" cy="19"  r="5.5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="-33" cy="-19" r="6"   fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" opacity="0.75"/>
+          <!-- substituent arm -->
+          <line x1="33" y1="-19" x2="60" y2="-34" stroke="#b45309" stroke-width="1.5" opacity="0.55"/>
+          <circle cx="60" cy="-34" r="5.5" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+          <line x1="60" y1="-34" x2="82" y2="-22" stroke="#b45309" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="82" cy="-22" r="5"   fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5" opacity="0.65"/>
+        </g>
+        <!-- RNA fragment top-left -->
+        <path d="M30,30 C50,50 55,80 35,100 C15,120 5,105 20,88 C35,71 50,85 40,108"
+              stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,2.5" opacity="0.4"/>
+        <circle cx="32"  cy="33"  r="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" opacity="0.65"/>
+        <circle cx="42"  cy="55"  r="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" opacity="0.65"/>
+        <circle cx="48"  cy="80"  r="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" opacity="0.65"/>
+        <!-- H-bond lines from ligand -->
+        <line x1="137" y1="131" x2="112" y2="118" stroke="#0f766e" stroke-width="1.2" stroke-dasharray="3,2.5" opacity="0.4"/>
+        <line x1="203" y1="131" x2="228" y2="118" stroke="#0f766e" stroke-width="1.2" stroke-dasharray="3,2.5" opacity="0.4"/>
+        <circle cx="112" cy="118" r="3" fill="none" stroke="#0f766e" stroke-width="1.2" opacity="0.45"/>
+        <circle cx="228" cy="118" r="3" fill="none" stroke="#0f766e" stroke-width="1.2" opacity="0.45"/>
+      </svg>
+    </div>
+
     <div class="container">
       <a href="index.html" class="page-breadcrumb"><i class="fa-solid fa-arrow-left"></i> Home</a>
       <span class="section-label">Expertise</span>
       <h1 class="page-title">Core <span class="accent">Research Areas</span></h1>
-      <p class="page-subtitle">Seven interconnected domains spanning computational chemistry, medicinal synthesis, AI/ML, and natural product drug discovery.</p>
+      <p class="page-subtitle">Seven interconnected domains spanning computational chemistry, AI-driven discovery, medicinal synthesis, and natural product pharmacology.</p>
     </div>
   </section>
 
-  <!-- PAGE CONTENT -->
-  <div class="page-content">
+  <!-- PAGE CONTENT — editorial numbered layout -->
+  <div class="page-content" style="padding-top: 56px;">
     <div class="container">
-      <div class="research-grid stagger">
+      <div class="research-editorial">
 
-        <!-- 1. Computer-Aided Drug Design -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap teal">
-            <i class="fa-solid fa-computer"></i>
-          </div>
-          <h3>Computer-Aided Drug Design</h3>
-          <p>Molecular docking, MD simulation, virtual screening, QSAR modelling and computational toxicology using Maestro, AutoDock &amp; BIOVIA Discovery Studio.</p>
-          <div class="research-tags">
-            <span>Molecular Docking</span>
-            <span>MD Simulation</span>
-            <span>QSAR</span>
+        <!-- 01 Computer-Aided Drug Design -->
+        <div class="re-item reveal">
+          <div class="re-num">01</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #0f766e;"></div>
+            <h2>Computer-Aided Drug Design</h2>
+            <p>High-throughput molecular docking, molecular dynamics simulation, free-energy perturbation, virtual screening, and QSAR modelling using Maestro (Schrödinger), AutoDock Vina, BIOVIA Discovery Studio and GROMACS. Structure-based and ligand-based design workflows applied to kinase, GPCR, enzyme and HDAC targets.</p>
+            <div class="re-tags">
+              <span>Molecular Docking</span>
+              <span>MD Simulation</span>
+              <span>QSAR / QSPR</span>
+              <span>Virtual Screening</span>
+              <span>Pharmacophore Modelling</span>
+              <span>ADMET Prediction</span>
+            </div>
           </div>
         </div>
 
-        <!-- 2. Medicinal Chemistry -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap purple">
-            <i class="fa-solid fa-vial"></i>
-          </div>
-          <h3>Medicinal Chemistry</h3>
-          <p>Design and synthesis of flavonoid, chromone, pyrazoline and heterocyclic scaffolds with full spectroscopic characterization.</p>
-          <div class="research-tags">
-            <span>Flavonoids</span>
-            <span>Chromones</span>
-            <span>Pyrazolines</span>
-          </div>
-        </div>
-
-        <!-- 3. Drug Discovery -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap gold">
-            <i class="fa-solid fa-pills"></i>
-          </div>
-          <h3>Drug Discovery</h3>
-          <p>In-silico, in-vitro and in-vivo pharmacological screening for anti-diabetic, anti-inflammatory, antimicrobial and anticancer targets.</p>
-          <div class="research-tags">
-            <span>Anti-diabetic</span>
-            <span>Anticancer</span>
-            <span>Anti-inflammatory</span>
+        <!-- 02 HDAC Inhibitor Design -->
+        <div class="re-item reveal">
+          <div class="re-num">02</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #dc2626;"></div>
+            <h2>HDAC Inhibitor Design</h2>
+            <p>Rational design and synthesis of histone deacetylase (HDAC) inhibitors — particularly piperidine hydroxamate scaffolds — for apoptosis induction in cervical cancer cell lines. Integrates classical medicinal chemistry optimisation with computational scoring functions to identify potent, isoform-selective candidates.</p>
+            <div class="re-tags">
+              <span>HDAC Isoform Selectivity</span>
+              <span>Hydroxamic Acid Warheads</span>
+              <span>Apoptosis Induction</span>
+              <span>Cervical Cancer</span>
+              <span>Zinc Chelation Chemistry</span>
+            </div>
           </div>
         </div>
 
-        <!-- 4. HDAC Inhibitor Design -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap red">
-            <i class="fa-solid fa-dna"></i>
-          </div>
-          <h3>HDAC Inhibitor Design</h3>
-          <p>Design and synthesis of HDAC inhibitors for apoptosis induction in cervical cancer cells, including piperidine hydroxamate scaffolds.</p>
-          <div class="research-tags">
-            <span>HDAC</span>
-            <span>Apoptosis</span>
-            <span>Cancer</span>
-          </div>
-        </div>
-
-        <!-- 5. AI & Machine Learning -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap green">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <h3>AI &amp; Machine Learning</h3>
-          <p>Machine learning and explainable AI in cheminformatics; Python-based tools for molecular fingerprint visualization and prediction.</p>
-          <div class="research-tags">
-            <span>Explainable AI</span>
-            <span>Cheminformatics</span>
-            <span>Python</span>
+        <!-- 03 Marine Bioactive Compounds -->
+        <div class="re-item reveal">
+          <div class="re-num">03</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #0891b2;"></div>
+            <h2>Marine Bioactive Compounds</h2>
+            <p>Discovery and computational profiling of antiviral and antimicrobial agents from marine organisms. Focus on human metapneumovirus (HMPV), Nipah virus and Zika virus targets. Combines in-silico screening of natural product databases with in-vitro validation to identify lead molecules from unexplored marine biodiversity.</p>
+            <div class="re-tags">
+              <span>Antiviral Agents</span>
+              <span>HMPV / Nipah / Zika</span>
+              <span>Marine Natural Products</span>
+              <span>Antimicrobial</span>
+              <span>Natural Product Databases</span>
+            </div>
           </div>
         </div>
 
-        <!-- 6. Marine Bioactive Compounds -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap cyan">
-            <i class="fa-solid fa-water"></i>
-          </div>
-          <h3>Marine Bioactive Compounds</h3>
-          <p>Marine bioactive molecules as antiviral (HMPV, Nipah, Zika) and antimicrobial agents through natural product drug discovery.</p>
-          <div class="research-tags">
-            <span>Antiviral</span>
-            <span>Marine Natural Products</span>
-            <span>HMPV</span>
-          </div>
-        </div>
-
-        <!-- 7. Spectroscopic Analysis -->
-        <div class="research-card reveal">
-          <div class="research-icon-wrap blue">
-            <i class="fa-solid fa-flask"></i>
-          </div>
-          <h3>Spectroscopic Analysis</h3>
-          <p>Structure elucidation and characterization using NMR, Infrared spectroscopy, and Mass spectrometry for synthesized compounds.</p>
-          <div class="research-tags">
-            <span>NMR</span>
-            <span>IR Spectroscopy</span>
-            <span>Mass Spec</span>
+        <!-- 04 Medicinal Chemistry & Synthesis -->
+        <div class="re-item reveal">
+          <div class="re-num">04</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #7c3aed;"></div>
+            <h2>Medicinal Chemistry &amp; Synthesis</h2>
+            <p>Design and multi-step synthesis of flavonoid derivatives, chromone analogues, pyrazoline scaffolds, and heterocyclic compounds with full spectroscopic characterisation (NMR, IR, mass spectrometry). Systematic structure–activity relationship studies guide optimisation toward improved potency and selectivity against cancer, diabetes, and inflammatory targets.</p>
+            <div class="re-tags">
+              <span>Flavonoids</span>
+              <span>Chromone Analogues</span>
+              <span>Pyrazolines</span>
+              <span>Heterocyclic Scaffolds</span>
+              <span>SAR Studies</span>
+              <span>Spectroscopic Characterisation</span>
+            </div>
           </div>
         </div>
 
-      </div>
+        <!-- 05 AI & Machine Learning in Drug Discovery -->
+        <div class="re-item reveal">
+          <div class="re-num">05</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #16a34a;"></div>
+            <h2>AI &amp; Machine Learning in Drug Discovery</h2>
+            <p>Application of machine learning and explainable AI (XAI) approaches to cheminformatics challenges: activity-cliff detection, scaffold-hopping, molecular fingerprint visualisation, and multi-task predictive modelling. Python-based workflows using RDKit, scikit-learn, and deep learning frameworks enable data-driven lead optimisation.</p>
+            <div class="re-tags">
+              <span>Explainable AI (XAI)</span>
+              <span>Cheminformatics</span>
+              <span>Molecular Fingerprints</span>
+              <span>Activity-Cliff Analysis</span>
+              <span>RDKit / scikit-learn</span>
+              <span>Deep Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 Drug Discovery & Pharmacology -->
+        <div class="re-item reveal">
+          <div class="re-num">06</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #b45309;"></div>
+            <h2>Drug Discovery &amp; Pharmacology</h2>
+            <p>Integrated in-silico, in-vitro and in-vivo pharmacological evaluation for anti-diabetic, anti-inflammatory, antimicrobial and anticancer targets. Repurposing of FDA-approved drugs via computational screening (Nipah, SARS-CoV-2 targets), coupled with animal model studies to establish efficacy and toxicity profiles.</p>
+            <div class="re-tags">
+              <span>Drug Repurposing</span>
+              <span>Anti-diabetic Targets</span>
+              <span>Anticancer Screening</span>
+              <span>In-vivo Pharmacology</span>
+              <span>ADMET / Toxicity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 Spectroscopic Analysis & Structural Chemistry -->
+        <div class="re-item reveal">
+          <div class="re-num">07</div>
+          <div class="re-body">
+            <div class="re-accent-bar" style="background: #1d4ed8;"></div>
+            <h2>Spectroscopic Analysis &amp; Structural Chemistry</h2>
+            <p>Structure elucidation and rigorous characterisation of synthesised compounds using ¹H and ¹³C NMR, FT-IR, UV-Vis spectroscopy, and high-resolution mass spectrometry (HRMS). Crystallographic analysis and conformational studies underpin reliable structure–activity correlations across all synthesis programmes.</p>
+            <div class="re-tags">
+              <span>¹H / ¹³C NMR</span>
+              <span>FT-IR</span>
+              <span>HRMS</span>
+              <span>UV-Vis</span>
+              <span>Conformational Analysis</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.research-editorial -->
     </div>
   </div>
 

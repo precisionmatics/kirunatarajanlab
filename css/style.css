@@ -188,9 +188,9 @@ section { padding: 96px 0; }
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  background: var(--teal);
+  background: var(--teal-dark);  /* #0f766e — 5.47:1 on white, WCAG AA */
   color: #fff;
-  border: 1.5px solid var(--teal);
+  border: 1.5px solid var(--teal-dark);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -529,12 +529,161 @@ section { padding: 96px 0; }
 }
 .hero-focus-tag i { font-size: 0.7rem; color: var(--teal-dark); }
 
-/* Keep old hero-content class harmless for subpages that might still use it */
+/* Keep old hero-content class harmless */
 .hero-content {
   max-width: 760px;
   display: flex;
   flex-direction: column;
 }
+
+/* ── Hero molecular visualization ── */
+.hero-mol-visual {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-52%);
+  width: 50%;
+  max-width: 580px;
+  pointer-events: none;
+  opacity: 0.68;
+  animation: fadeUp 1.2s var(--ease-spring) 0.25s both;
+  z-index: 0;
+}
+.hero-mol-visual svg { width: 100%; height: auto; display: block; }
+
+/* Hero text column — left half only */
+.hero-text-col {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Metrics strip ── */
+.hero-metrics {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.metrics-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 0 12px;
+  animation: fadeUp 0.55s var(--ease-spring) 0.8s both;
+}
+.metric-num {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--teal-dark);  /* 5.47:1 */
+  line-height: 1;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.metric-plus {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+.metric-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+  text-align: center;
+}
+.metric-sub {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  color: var(--text-subtle);  /* 4.6:1 */
+  text-align: center;
+  line-height: 1.3;
+}
+.metric-div {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Research editorial layout ── */
+.research-editorial {
+  display: flex;
+  flex-direction: column;
+}
+.re-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 32px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background 0.2s ease;
+}
+.re-item:last-child { border-bottom: none; }
+.re-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--navy);
+  opacity: 0.08;
+  line-height: 1;
+  padding-top: 6px;
+  user-select: none;
+}
+.re-body { display: flex; flex-direction: column; gap: 12px; }
+.re-accent-bar {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+.re-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.re-body p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 680px;
+}
+.re-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.re-tags span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--text-subtle);
+  background: #fff;
+  transition: border-color 0.2s, color 0.2s;
+}
+.re-tags span:hover { border-color: var(--teal-border); color: var(--teal-dark); }
 
 .hero-badge {
   display: inline-flex;
@@ -1828,21 +1977,24 @@ a.contact-value:hover { color: var(--teal-dark); }
 
 /* ── RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 1100px) {
-  .hero-split { gap: 48px; }
+  .hero-mol-visual { width: 52%; opacity: 0.55; }
   .hero-name  { font-size: clamp(3rem, 6vw, 5rem); }
-  .research-grid { grid-template-columns: repeat(2, 1fr); }
   .patents-grid  { grid-template-columns: repeat(2, 1fr); }
   .with-deco { padding-right: 0; }
   .with-deco::after { display: none; }
 }
 
 @media (max-width: 900px) {
-  .hero-split { grid-template-columns: 1fr; gap: 40px; }
-  .hero-right { order: -1; }  /* numbers before name on tablet/mobile */
-  .hero-numbers { max-width: 420px; }
+  .hero-mol-visual { display: none; }
+  .hero-body { padding: 64px 0 48px; }
+  .hero-text-col { max-width: 100%; }
+  .metrics-row { flex-wrap: wrap; gap: 0; }
+  .metric-item { flex-basis: 33.33%; padding: 12px 8px; }
+  .metric-div { display: none; }
   .showcase-grid { grid-template-columns: 1fr 1fr; }
+  .re-item { grid-template-columns: 52px 1fr; gap: 20px; }
+  .re-num { font-size: 2.2rem; }
   section { padding: 72px 0; }
-  .hero-body { padding: 56px 0 48px; }
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1869,7 +2021,7 @@ a.contact-value:hover { color: var(--teal-dark); }
   .nav-links a::after { display: none; }
   .nav-toggle { display: flex; }
   .hero-name  { font-size: clamp(2.75rem, 10vw, 4rem); }
-  .hero-numbers { max-width: 100%; }
+  .metric-item { flex-basis: 50%; }
   .showcase-grid { grid-template-columns: 1fr; }
   .showcase-card { padding: 28px; }
   .research-grid  { grid-template-columns: 1fr; }
@@ -1885,13 +2037,15 @@ a.contact-value:hover { color: var(--teal-dark); }
   .works-tabs { flex-direction: column; width: 100%; }
   .works-tab { border-right: none; border-bottom: 1px solid var(--border); }
   .works-tab:last-child { border-bottom: none; }
+  .re-item { grid-template-columns: 1fr; gap: 8px; padding: 28px 0; }
+  .re-num { font-size: 1.6rem; opacity: 0.06; }
 }
 
 @media (max-width: 480px) {
   .hero-name  { font-size: clamp(2.5rem, 12vw, 3.5rem); }
   .hero-cta   { flex-direction: column; width: 100%; }
   .hero-cta .btn-primary, .hero-cta .btn-secondary { width: 100%; justify-content: center; }
-  .hero-focus-tags { display: none; }
+  .metric-item { flex-basis: 50%; }
   .leadership-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 1.75rem; }
 }

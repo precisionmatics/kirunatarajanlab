@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dr. N. Kiruthiga — Associate Professor of Pharmaceutical Chemistry, KMCH College of Pharmacy, Coimbatore. Expert in Computer-Aided Drug Design, Medicinal Chemistry, AI-Driven Drug Discovery." />
-  <meta name="keywords" content="Dr N Kiruthiga, Pharmaceutical Chemistry, Drug Design, CADD, Medicinal Chemistry, KMCH College of Pharmacy, Coimbatore" />
   <meta name="author" content="Dr. N. Kiruthiga" />
   <meta property="og:title" content="Dr. N. Kiruthiga | Pharmaceutical Chemistry &amp; Drug Discovery" />
-  <meta property="og:description" content="Associate Professor with 18.5+ years experience, 41 publications, 6 patents, and pioneering research in CADD and AI-driven drug discovery." />
+  <meta property="og:description" content="18.5+ years · 41 publications · 6 patents · CADD, Marine Bioactives, AI Drug Discovery." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kirunatarajanlab.com" />
   <title>Dr. N. Kiruthiga | Pharmaceutical Chemistry &amp; Drug Discovery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,74 +40,203 @@
 
   <!-- HERO -->
   <section id="hero">
+
+    <!-- Molecular visualization — protein/ligand/RNA SVG art, right-side background -->
+    <div class="hero-mol-visual" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" fill="none">
+        <defs>
+          <!-- Hexagonal lattice pattern -->
+          <pattern id="mol-hex" x="0" y="0" width="36" height="31.2" patternUnits="userSpaceOnUse">
+            <path d="M18,0 L36,9 L36,22.2 L18,31.2 L0,22.2 L0,9Z" fill="none" stroke="rgba(13,148,136,0.09)" stroke-width="0.8"/>
+          </pattern>
+          <!-- Pocket radial glow -->
+          <radialGradient id="pocketGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0d9488" stop-opacity="0.07"/>
+            <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Helix gradients -->
+          <linearGradient id="hx1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f766e" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0891b2" stop-opacity="0.75"/>
+          </linearGradient>
+          <linearGradient id="hx2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.78"/>
+            <stop offset="100%" stop-color="#0f766e" stop-opacity="0.65"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Hex lattice background -->
+        <rect width="500" height="460" fill="url(#mol-hex)"/>
+
+        <!-- Protein surface glow -->
+        <ellipse cx="248" cy="228" rx="198" ry="172" fill="url(#pocketGlow)"/>
+
+        <!-- ╔═══ HELIX 1 — main, bottom-left → center, TEAL ═══╗ -->
+        <path d="M44,432 C60,410 80,396 64,373 C48,350 26,338 46,316 C66,294 90,285 74,262 C58,239 34,230 52,209 C70,188 96,181 82,161"
+              stroke="url(#hx1)" stroke-width="16" stroke-linecap="round"/>
+        <!-- ribbon highlight -->
+        <path d="M52,428 C68,406 87,393 72,370 C56,347 34,335 53,313 C72,291 96,282 81,259 C65,236 42,227 59,206 C77,185 103,178 90,158"
+              stroke="rgba(94,234,212,0.5)" stroke-width="5" stroke-linecap="round"/>
+
+        <!-- ╔═══ HELIX 2 — upper right, BLUE ═══╗ -->
+        <path d="M412,62 C436,84 451,110 430,136 C409,162 382,166 398,196 C414,226 442,232 424,262 C406,292 378,296 392,326"
+              stroke="url(#hx2)" stroke-width="14" stroke-linecap="round"/>
+        <!-- ribbon highlight -->
+        <path d="M420,65 C444,87 457,113 437,139 C416,165 389,169 404,199 C420,229 448,235 431,265 C414,295 385,299 399,329"
+              stroke="rgba(147,197,253,0.48)" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- ╔═══ HELIX 3 — small, top-center, CYAN ═══╗ -->
+        <path d="M170,58 C188,75 200,97 184,118 C168,139 146,144 160,166 C174,188 196,190 182,212"
+              stroke="#0891b2" stroke-width="11" stroke-linecap="round" opacity="0.68"/>
+
+        <!-- ╔═══ β-STRAND arrow ═══╗ -->
+        <path d="M424,392 L342,354 L350,332 L268,316 L265,347 L350,366 L340,388 Z"
+              fill="rgba(217,119,6,0.16)" stroke="#b45309" stroke-width="1.5" opacity="0.78"/>
+
+        <!-- ╔═══ CONNECTING LOOPS ═══╗ -->
+        <path d="M82,161 C112,139 150,152 178,172" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+        <path d="M182,212 C198,220 216,224 237,230" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+        <path d="M278,230 C318,224 352,216 392,196" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+        <path d="M265,347 C265,368 304,378 342,354" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+
+        <!-- ╔═══ RNA HAIRPIN — top-right ═══╗ -->
+        <path d="M458,30 C492,56 500,100 470,126 C440,152 412,140 430,112 C448,84 474,97 464,130"
+              stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,3" opacity="0.55"/>
+        <!-- Nucleotide bases -->
+        <circle cx="460" cy="34"  r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="476" cy="57"  r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="488" cy="84"  r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="489" cy="112" r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="474" cy="132" r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="454" cy="144" r="5.5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
+        <!-- Base-pair bridge -->
+        <line x1="476" y1="57"  x2="488" y2="84"  stroke="#dbeafe" stroke-width="2" opacity="0.6"/>
+        <line x1="488" y1="84"  x2="489" y2="112" stroke="#dbeafe" stroke-width="2" opacity="0.6"/>
+
+        <!-- ╔═══ LIGAND — HDAC inhibitor scaffold (center) ═══╗ -->
+        <g transform="translate(252,230)">
+          <!-- Benzene ring core -->
+          <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15"
+                   fill="rgba(180,83,9,0.12)" stroke="#b45309" stroke-width="2.5"/>
+          <!-- Aromatic ring (dashed inner) -->
+          <polygon points="0,-21 18,-10.5 18,10.5 0,21 -18,10.5 -18,-10.5"
+                   fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/>
+          <!-- Heteroatoms on ring -->
+          <circle cx="0"   cy="-30" r="5.5" fill="#ef4444" opacity="0.92"/>  <!-- O -->
+          <circle cx="26"  cy="-15" r="4.5" fill="#ca8a04" opacity="0.85"/>  <!-- C -->
+          <circle cx="26"  cy="15"  r="5.5" fill="#1d4ed8" opacity="0.92"/>  <!-- N -->
+          <circle cx="0"   cy="30"  r="4.5" fill="#ca8a04" opacity="0.85"/>  <!-- C -->
+          <circle cx="-26" cy="15"  r="4.5" fill="#ca8a04" opacity="0.85"/>  <!-- C -->
+          <circle cx="-26" cy="-15" r="5.5" fill="#16a34a" opacity="0.92"/>  <!-- S -->
+
+          <!-- Hydroxamic acid arm (-C(=O)NHOH) -->
+          <line x1="26"  y1="-15" x2="54"  y2="-30" stroke="#b45309" stroke-width="2"   opacity="0.82"/>
+          <line x1="54"  y1="-30" x2="80"  y2="-20" stroke="#b45309" stroke-width="2"   opacity="0.82"/>
+          <circle cx="80" cy="-20" r="5.5" fill="#ef4444" opacity="0.9"/>  <!-- O -->
+          <line x1="80"  y1="-20" x2="97"  y2="-7"  stroke="#b45309" stroke-width="1.5" opacity="0.75"/>
+          <circle cx="97" cy="-7"  r="5"   fill="#1d4ed8" opacity="0.88"/>  <!-- N -->
+          <line x1="97"  y1="-7"  x2="114" y2="-18" stroke="#b45309" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="114" cy="-18" r="5.5" fill="#ef4444" opacity="0.9"/>  <!-- OH -->
+
+          <!-- Piperidine ring -->
+          <polygon points="-15,-52 -38,-52 -50,-32 -44,-8 -22,-4 -10,-26"
+                   fill="rgba(29,78,216,0.10)" stroke="#1d4ed8" stroke-width="2" opacity="0.82"/>
+          <circle cx="-33" cy="-9" r="5.5" fill="#1d4ed8" opacity="0.92"/>  <!-- N -->
+        </g>
+
+        <!-- ╔═══ H-BOND INTERACTIONS (dashed) ═══╗ -->
+        <line x1="252" y1="200" x2="218" y2="180" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.55"/>
+        <line x1="278" y1="212" x2="318" y2="196" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.55"/>
+        <line x1="366" y1="222" x2="392" y2="218" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.55"/>
+        <line x1="236" y1="270" x2="212" y2="290" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.55"/>
+        <!-- H-bond anchor circles -->
+        <circle cx="218" cy="180" r="3.5" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="392" cy="218" r="3.5" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="212" cy="290" r="3.5" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.6"/>
+
+        <!-- ╔═══ ACTIVE SITE BOUNDARY ═══╗ -->
+        <ellipse cx="252" cy="233" rx="108" ry="94"
+                 fill="none" stroke="rgba(13,148,136,0.22)" stroke-width="1.8" stroke-dasharray="7,4"/>
+        <text x="252" y="130" text-anchor="middle"
+              font-family="Instrument Sans,system-ui,sans-serif" font-size="9.5"
+              font-weight="600" fill="#0f766e" opacity="0.55" letter-spacing="0.15em">ACTIVE SITE</text>
+
+        <!-- Depth atoms (background context) -->
+        <circle cx="88"  cy="442" r="5"   fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.35"/>
+        <circle cx="118" cy="430" r="3.5" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.25"/>
+        <circle cx="440" cy="442" r="5"   fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.35"/>
+        <circle cx="484" cy="404" r="3.5" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.25"/>
+        <circle cx="26"  cy="54"  r="4.5" fill="none" stroke="#0f766e" stroke-width="1" opacity="0.22"/>
+        <circle cx="10"  cy="395" r="3.5" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.22"/>
+      </svg>
+    </div>
+
+    <!-- Hero text content -->
     <div class="hero-body container">
-      <div class="hero-split">
+      <div class="hero-text-col">
+        <p class="hero-dept">KMCH College of Pharmacy &middot; Coimbatore, India</p>
+        <h1 class="hero-name">Dr. N.<br>Kiruthiga</h1>
+        <p class="hero-role">Associate Professor &middot; Pharmaceutical Chemistry</p>
+        <div class="hero-typewriter">
+          <span class="typewriter-static">Pioneering </span><span id="typewriterText"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+        </div>
+        <div class="hero-cta">
+          <a href="research.html" class="btn-primary">
+            <i class="fa-solid fa-microscope"></i> Explore Research
+          </a>
+          <a href="works.html" class="btn-secondary">
+            <i class="fa-brands fa-google-scholar"></i> Publications &amp; Works
+          </a>
+        </div>
+        <div class="hero-social">
+          <a href="mailto:kiruthigagovindaraj@gmail.com" class="hero-social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/kiruthiga-govindaraj-898b456a" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-social-link" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="https://orcid.org/0000-0002-7230-2003" target="_blank" rel="noopener" class="hero-social-link" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+        </div>
+      </div>
+    </div>
 
-        <!-- LEFT: credentials + CTA -->
-        <div class="hero-left">
-          <p class="hero-dept">KMCH College of Pharmacy &middot; Coimbatore, India</p>
-          <h1 class="hero-name">Dr. N.<br>Kiruthiga</h1>
-          <p class="hero-role">Associate Professor &middot; Pharmaceutical Chemistry</p>
-          <div class="hero-typewriter">
-            <span class="typewriter-static">Pioneering </span><span id="typewriterText"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+    <!-- Metrics strip -->
+    <div class="hero-metrics">
+      <div class="container">
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-num stat-number" data-target="41">0</span>
+            <span class="metric-label">Publications</span>
+            <span class="metric-sub">Scopus / WoS / PubMed</span>
           </div>
-          <div class="hero-cta">
-            <a href="research.html" class="btn-primary">
-              <i class="fa-solid fa-microscope"></i> Explore Research
-            </a>
-            <a href="works.html" class="btn-secondary">
-              <i class="fa-brands fa-google-scholar"></i> Publications &amp; Works
-            </a>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num stat-number" data-target="6">0</span>
+            <span class="metric-label">Patents</span>
+            <span class="metric-sub">India · UK · Germany</span>
           </div>
-          <div class="hero-social">
-            <a href="mailto:kiruthigagovindaraj@gmail.com" class="hero-social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/kiruthiga-govindaraj-898b456a" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://scholar.google.com/citations?user=NSQRRvoAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-social-link" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-            <a href="https://orcid.org/0000-0002-7230-2003" target="_blank" rel="noopener" class="hero-social-link" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num"><span class="stat-number stat-decimal" data-target="18.5">0</span><span class="metric-plus">+</span></span>
+            <span class="metric-label">Years Experience</span>
+            <span class="metric-sub">Teaching &amp; Research</span>
+          </div>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num stat-number" data-target="17">0</span>
+            <span class="metric-label">Q1/Q2 Papers</span>
+            <span class="metric-sub">2025 – 2026</span>
+          </div>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num stat-number" data-target="3">0</span>
+            <span class="metric-label">Books</span>
+            <span class="metric-sub">2 Published · 1 Forthcoming</span>
+          </div>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num stat-number" data-target="35">0</span><span class="metric-plus">+</span>
+            <span class="metric-label">Students Mentored</span>
+            <span class="metric-sub">UG &amp; PG Projects</span>
           </div>
         </div>
-
-        <!-- RIGHT: key numbers + research focus -->
-        <div class="hero-right">
-          <div class="hero-numbers">
-            <div class="hero-num-item">
-              <div class="hero-num-value">
-                <span class="stat-number" data-target="41">0</span>
-              </div>
-              <div class="hero-num-label">Publications</div>
-              <div class="hero-num-sub">Scopus &middot; WoS &middot; PubMed</div>
-            </div>
-            <div class="hero-num-item">
-              <div class="hero-num-value">
-                <span class="stat-number" data-target="6">0</span>
-              </div>
-              <div class="hero-num-label">Patents</div>
-              <div class="hero-num-sub">India &middot; UK &middot; Germany</div>
-            </div>
-            <div class="hero-num-item">
-              <div class="hero-num-value">
-                <span class="stat-number stat-decimal" data-target="18.5">0</span><span class="stat-plus">+</span>
-              </div>
-              <div class="hero-num-label">Years Experience</div>
-              <div class="hero-num-sub">Teaching &amp; Research</div>
-            </div>
-            <div class="hero-num-item">
-              <div class="hero-num-value">
-                <span class="stat-number" data-target="17">0</span>
-              </div>
-              <div class="hero-num-label">Q1/Q2 Papers</div>
-              <div class="hero-num-sub">Published 2025&ndash;2026</div>
-            </div>
-          </div>
-          <div class="hero-focus-tags">
-            <span class="hero-focus-tag"><i class="fa-solid fa-computer"></i> CADD</span>
-            <span class="hero-focus-tag"><i class="fa-solid fa-robot"></i> AI Drug Discovery</span>
-            <span class="hero-focus-tag"><i class="fa-solid fa-fish"></i> Marine Bioactives</span>
-            <span class="hero-focus-tag"><i class="fa-solid fa-flask-vial"></i> Medicinal Chemistry</span>
-            <span class="hero-focus-tag"><i class="fa-solid fa-dna"></i> HDAC Inhibitors</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
