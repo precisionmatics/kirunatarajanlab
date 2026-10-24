@@ -88,9 +88,12 @@ window.addEventListener('scroll', () => {
 
 // ── Active nav — URL-based (works on all pages) ───────
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+// Old standalone pages map to the combined Works link
+const worksPages = ['publications.html', 'patents.html', 'books.html'];
 document.querySelectorAll('.nav-links a').forEach(a => {
   const href = a.getAttribute('href');
   if (href === currentPage) a.classList.add('active');
+  if (href === 'works.html' && worksPages.includes(currentPage)) a.classList.add('active');
 });
 
 // ── Mobile menu ───────────────────────────────────────
